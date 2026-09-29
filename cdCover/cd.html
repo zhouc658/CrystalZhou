@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Happy MUSIC | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch("../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>My Happy MUSIC</h1>
+        <h3>Crystal Zhou, 2023</h3>
+        <p class="project-summary">
+            A CD cover design visualizing how music transforms stress into focus and enjoyment during work.
+        </p>
+
+        <!-- Large image row -->
+        <div class="project-images-single">
+            <img src="cdCover.JPEG" alt="My Happy MUSIC CD Front Cover">
+        </div>
+    </section>
+
+    <!-- PROJECT DETAILS -->
+    <section class="project-section">
+        <h2>Project Details</h2>
+        <p><strong>Medium:</strong> Digital Media</p>
+        <p><strong>Size:</strong> 8 × 17 in</p>
+        <p><strong>Software:</strong> Procreate, Adobe InDesign</p>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+        <p>
+            <em>My Happy MUSIC</em> is a CD cover design inspired by the emotional shift I experience when listening to my YouTube playlist while working on assignments. The project explores the contrast between stress and joy, and how music transforms my mindset during focused tasks.
+        </p>
+
+        <p>
+            The front cover features a realistic illustration of my left hand working with an Apple Pencil, rendered in a dark blue color palette to convey stress and mental pressure. This drawing was based on a reference photo I took. The subdued tones reflect the emotional weight of completing assignments without music.
+        </p>
+
+        <p>
+            In contrast, the back cover presents a cartoon-style illustration of headphones playing music. The bright, colorful background represents the uplifting energy that music brings. The headphone wires wrap around the arm from the front cover, visually connecting the two sides and symbolizing how music reshapes the emotional experience of working.
+        </p>
+
+        <p>
+            The title “MH MUSIC” references my personal playlist. The illustrations were created in Procreate using round and flat brushes on an iPad with Apple Pencil, and the final CD layout was assembled in Adobe InDesign.
+        </p>
+    </section>
+
+</body>
+</html>

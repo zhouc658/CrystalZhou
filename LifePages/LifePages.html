@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Your Life Pages | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch("../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>Your Life Pages</h1>
+        <h3>Crystal Zhou, 2025</h3>
+
+        <p class="project-summary">
+            Your Life Pages lets users take control of their accelerated time by making choices across work, social, and
+            personal tasks, ultimately revealing how their habits shape the course of their life.
+        </p>
+
+         <!-- Key Images / Visual Hook -->
+    <div class="project-images">
+        <img src="start.png" alt="Your Life Pages Screenshot 1">
+        <img src="planner.png" alt="Your Life Pages Screenshot 2">
+        <img src="task.png" alt="Your Life Pages Screenshot 3">
+        <img src="result.png" alt="Your Life Pages Screenshot 4">
+    </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+
+        <p>
+            In the world of <em>Your Life Pages</em>, people have a little more control over their time, but every
+            choice comes with trade-offs. This interactive world explores how everyday decisions quietly shape the life
+            we end up living, even though time is always finite.
+        </p>
+
+        <p>
+            Users receive a simple life planner with three tasks: work, social connections, and personal joy, and make
+            choices that feel natural to their habits. Spending more time on one task brings greater reward in that area
+            but leaves less time for the others.
+        </p>
+
+        <p>
+            Once a task is completed, it is locked, reflecting the irreversibility of time. At the end, users receive a
+            letter showing the life they have created, encouraging reflection rather than judging their decisions.
+        </p>
+    </section>
+
+    <!-- TECHNICAL APPROACH -->
+    <section class="project-section">
+        <br>
+        <h2>Technical Approach</h2>
+
+        <p><strong>Skills:</strong> React.js, Adobe Illustrator, CSS Grid</p>
+
+        <p>
+            I built <em>Your Life Pages</em> using React.js, with state variables tracking user choices and controlling
+            page transitions, background updates, and endings. CSS Grid made objects in the background clickable,
+            revealing subtle reflections, while Adobe Illustrator provided the custom visual environments.
+        </p>
+
+        <p>
+            The interactive experience responds dynamically to user decisions, including task completion and time
+            extensions, and integrates adaptive audio to reinforce the passage of time.
+        </p>
+
+        <div class="video-container">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/GEzvwL0lTAE?si=Qqz9zGBL_Yo_WrY2&vq=hd720"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="links">
+            Links:
+            <ul>
+                <li>
+                    <a href="https://github.com/zhouc658/TimeFinal2" target="_blank">GitHub Repository
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monogram & ID Card Design | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar"></div>
+<script>
+    fetch("../nav.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("navbar").innerHTML = data;
+        });
+</script>
+
+<!-- PROJECT HEADER -->
+<section class="project-header">
+    <h1>Monogram & ID Card Design</h1>
+    <h3>Crystal Zhou, 2025</h3>
+
+    <p class="project-summary">
+        An elegant and dreamy monogram logo that extends into a personalized ID card, exploring how a visual identity can evolve across formats.
+    </p>
+
+    <!-- Large Images (one per row) -->
+    <div class="project-images single-stack">
+        <img src="front.JPG" alt="Monogram Logo Design">
+        <img src="back.JPG" alt="ID Card Front Design">
+    </div>
+</section>
+
+<!-- DESCRIPTION -->
+<section class="project-section">
+    <h2>Description</h2>
+    <p>
+        This project began as a monogram logo design and expanded into a personalized ID card system. 
+        The goal was to create an elegant and dreamy visual identity through refined typography, 
+        soft forms, and cohesive visual details. By extending the monogram into an ID card format, 
+        the project explores how branding elements can remain consistent while adapting across 
+        different applications.
+    </p>
+</section>
+
+<!-- TECHNICAL APPROACH -->
+<section class="project-section">
+    <h2>Technical Approach</h2>
+    <p><strong>Skills:</strong> Adobe Illustrator, Adobe InDesign, Typography, Branding</p>
+    <p>
+        The monogram was developed with attention to balance, proportion, and letterform harmony. 
+        After refining the logo, I extended the visual identity into a personalized ID card layout 
+        using Adobe InDesign, ensuring consistent typography, spacing, and hierarchy throughout 
+        the system.
+    </p>
+</section>
+
+</body>
+</html>

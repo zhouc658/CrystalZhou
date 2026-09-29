@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Graphic Design | Crystal Zhou</title>
+    <link rel="stylesheet" href="../menu.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch("../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <section class="creative-tech">
+        <h2>Creative Technology Projects</h2>
+
+        <div class="ct-item left">
+            <div class="ct-image">
+                <a href="../newsletter/nl.html">
+                    <img src="../newsletter/page.png" alt="Your Life Pages">
+                </a>
+            </div>
+            <div class="ct-text">
+                <h3>Blind Box</h3>
+                <p>A typography-focused newsletter exploring blindbox culture, balancing visual storytelling and text to engage readers while educating them about the origins and history of blindboxes.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="ct-item right">
+            <div class="ct-image">
+                <a href="../logo/logo.html">
+                    <img src="../logo/front.JPG" alt="Music Diary">
+                </a>
+            </div>
+            <div class="ct-text">
+                <h3>Personal Logo Design</h3>
+                <p>An elegant and dreamy monogram logo that extends into a personalized ID card, exploring how a visual identity can evolve across formats.</p>
+            </div>
+        </div>
+
+        <div class="ct-item left">
+            <div class="ct-image">
+                <a href="../cdCover/cd.html">
+                    <img src="../cdCover/cdCover.JPEG" alt="Our Shadow Puppet Show">
+                </a>
+            </div>
+            <div class="ct-text">
+                <h3>My Happy MUSIC</h3>
+                <p>My Happy MUSIC visualizes how music transforms the emotional experience of working, turning stress and pressure into focus, enjoyment, and creative energy.</p>
+            </div>
+        </div>
+
+        <div class="ct-item right">
+            <div class="ct-image">
+                <a href="../cautious/cautious.html">
+                    <img src="../cautious/poster.jpg" alt="Music Diary">
+                </a>
+            </div>
+            <div class="ct-text">
+                <h3>CAUTION</h3>
+                <p><em>CAUTION</em> addresses the lasting impact of our digital footprint. In an era where posting online often feels casual and consequence-free, this poster reflects on how harmful actions behind a screen can affect others and eventually return to the perpetrator.</p>
+            </div>
+        </div>
+
+        <div class="ct-item left">
+            <div class="ct-image">
+                <a href="../chinese/chinese.html">
+                    <img src="../chinese/chinese.jpg" alt="Music Diary">
+                </a>
+            </div>
+            <div class="ct-text">
+                <h3>Chinese New Year Traditions</h3>
+                <p>A filter inspired by Sichuan opera’s bian lian masks and favorite childhood characters, creating an immersive, interactive experience.</p>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

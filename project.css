@@ -1,0 +1,291 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color:  #052d64;
+    color: #04132e;
+    font-family: Georgia, serif;
+}
+/* NAV BAR */
+nav {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo takes more space, others evenly divided */
+nav .logo {
+    flex: 2; /* logo section wider */
+}
+
+nav .CT,
+nav .GD,
+nav .others {
+    flex: 1; /* menu links equal width */
+    text-align: center;
+}
+
+/* Make links fill their div */
+nav a {
+    display: block;
+    padding: 20px 0; /* fixed button height */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px; /* base font size for menu links */
+    color: #fef7c6;
+    transition: all 0.3s ease;
+}
+
+/* Logo button fixed height */
+nav .logo a {
+    background-color: #0c3a7a;
+    color:#fff6b9;
+    padding: 25px 0;   /* fixed height */
+    display: flex;
+    align-items: center;
+}
+
+/* Scale text and image */
+nav .logo a span {
+    display: inline-block;
+    font-size: 16px;       /* normal base size */
+    transform: scale(1.6); /* visually larger */
+}
+
+nav .logo img {
+    height: 43px;           /* small base height */
+    transform: scale(2);    /* visually larger without increasing box */
+    margin-right: 80px;
+    margin-left: 50px;
+}
+
+/* Menu link backgrounds */
+nav .CT a { background-color: #3168b5; }
+nav .GD a { background-color: #5d93df; }
+nav .others a { background-color: #88b9fd; }
+
+/* Hover effect */
+nav a:hover {
+    text-shadow: 0 0 10px #fdf1a7;
+}
+
+/* Active / clicked link (text only) */
+nav a.active {
+    color: rgba(255, 241, 167, 0.7);
+    text-shadow: 0 0 12px #fdf1a7;
+}
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+.project-header {
+    max-width: 900px;
+    margin: 30px auto 40px auto;
+    padding: 0 40px;
+    text-align: center;  
+}
+
+.project-header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color:#fef7c6;
+}
+
+.project-header h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    color:aliceblue;
+}
+
+.project-summary {
+    max-width: 780px;
+    font-size: 18px;
+    margin: 0 auto;      
+    line-height: 1.6;
+    color:aliceblue;
+}
+
+.project-images {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 columns on wider screens */
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.project-images img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.project-section {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+
+.project-section h2{
+    color:#fef7c6;
+}
+
+.project-section p{
+    font-size: 18px;
+    line-height: 1.6;
+    color:aliceblue;
+
+}
+
+/* Container: 2 columns */
+.project-images-shadow {
+    display: flex;
+    gap: 20px;           /* space between poster and stacked images */
+    margin-bottom: 40px;
+}
+
+/* Container: 2 columns, centered */
+.project-images-shadow {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* center the whole block */
+    align-items: flex-start; /* align images at top */
+    gap: 40px;               /* more space between poster and stacked images */
+    margin-bottom: 40px;
+    flex-wrap: wrap;          /* allows wrapping if screen too narrow */
+}
+
+/* Poster on the left */
+.project-images-shadow .poster img {
+    width: 350px;             /* bigger poster */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    flex-shrink: 0;
+}
+
+/* Stacked images on the right */
+.project-images-shadow .stacked-images {
+    display: flex;
+    flex-direction: column;  /* stack top to bottom */
+    gap: 20px;               /* space between stacked images */
+}
+
+.project-images-shadow .stacked-images img {
+    width: 390px;            /* match poster width for balance */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Music Diary Images: Single Row Layout */
+.music-diary-images {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr)); /* min 300px per image, grow as needed */
+    gap: 50px;                             /* space between images */
+    max-width: 2000px;                     /* limits total width */
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.music-diary-images img {
+    width: 110%;       /* fills each column */
+    height: auto;      /* keep aspect ratio */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.project-images-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* space between top row and bottom image */
+}
+
+/* Top row: two images side by side */
+.project-images-top {
+    display: flex;
+    gap: 20px;
+}
+
+/* Make the third image centered */
+.project-images-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+/* Optional: control image sizes */
+.project-images-wrapper img {
+    width: 450px;  /* adjust as needed */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.project-images-single {
+    width: 100%;
+    margin: 30px 0; /* space above and below each image */
+    text-align: center;
+}
+
+.project-images-single img {
+    width: 90%;      /* nearly full width, can adjust */
+    max-width: 1000px; 
+    height: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.project-images.single-stack {
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    gap: 30px;                /* space between images */
+    max-width: 600px;         /* controls image size */
+    margin: 40px auto;        /* centers container */
+}
+
+.project-images.single-stack img {
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+/* Responsive: stack images on smaller screens */
+@media (max-width: 768px) {
+    .music-diary-images {
+        grid-template-columns: 1fr; /* stack vertically */
+    }
+}
+
+.video-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.video-container iframe,
+.video-container video {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+}
+
+.links {
+    margin-top: 40px;
+    font-size: 18px;
+    color:  #fff6b9;
+}
+.links ul {
+    padding-left: 20px; /* keeps bullets indented */
+}
+
+.links li {
+    margin-bottom: 10px;
+}
+
+.links a {
+    color:aliceblue;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    color: #fdf1a7; /* hover color */
+    text-shadow: 0 0 8px #fdf1a7;
+}

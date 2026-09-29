@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blindbox Newsletter | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch("../nav.html") <!-- relative path for project pages -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>Blindbox Newsletter</h1>
+        <h3>Crystal Zhou, 2025</h3>
+        <p class="project-summary">
+            A typography-focused newsletter exploring blindbox culture, balancing visual storytelling and text to engage readers while educating them about the origins and history of blindboxes.
+        </p>
+    </section>
+
+    <!-- TECHNICAL APPROACH -->
+    <section class="project-section">
+        <h2>Technical Approach</h2>
+        <p><strong>Skills:</strong> Adobe InDesign, Photoshop, Typography, Layout Design</p>
+        <p>
+            The newsletter was created using Adobe InDesign and Photoshop. Each page balances visual storytelling and informative content, employing grid systems, typographic hierarchy, and layout techniques to maximize readability and engagement.
+        </p>
+    </section>
+ <!-- Key Images -->
+ <div class="project-images-single">
+    <img src="start.png" alt="Newsletter Spread 1">
+    <img src="page.png" alt="Newsletter Spread 2">
+</div>
+</body>
+</html>

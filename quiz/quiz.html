@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blindbox Quiz | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch("../nav.html")  <!-- relative path for project pages -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>Blindbox Quiz</h1>
+        <h3>Crystal Zhou, 2025</h3>
+        <p class="project-summary">
+            A short quiz designed to help newcomers explore the world of blindboxes and get personalized suggestions.
+        </p>
+
+        <!-- Key Images (optional screenshots of quiz) -->
+        <div class="project-images-wrapper">
+            <div class="project-images-top">
+                <img src="start.png" alt="Blindbox Quiz Screenshot 1">
+                <img src="quiz.png" alt="Blindbox Quiz Screenshot 2">
+            </div>
+            <div class="project-images-bottom">
+                <img src="receipt.png" alt="Blindbox Quiz Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+        <p>
+            This short quiz helps those who are new to the blindbox community and unsure where to start. Users answer a
+            series of questions about their interests, and the quiz suggests what type of blindbox they might enjoy.
+            It’s a playful, interactive way to introduce newcomers to collectible blindboxes.
+        </p>
+    </section>
+
+    <!-- TECHNICAL APPROACH -->
+    <section class="project-section">
+        <h2>Technical Approach</h2>
+        <p><strong>Skills:</strong> JavaScript, HTML, and CSS</p>
+        <p>
+            I built the quiz using JavaScript, storing answers locally with localStorage to calculate results based on
+            user choices. The quiz dynamically provides suggestions based on the selections, making the experience
+            personalized and responsive without requiring a backend.
+        </p>
+
+        <div class="links">
+            Links:
+            <ul>
+                <li>
+                    <a href="https://zhouc658.github.io/css_grid/quiz/quiz.html" target="_blank">View Live Demo</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+
+</html>

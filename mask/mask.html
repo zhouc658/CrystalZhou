@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Face-Changing Filter | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch("../nav.html")  <!-- use relative path for project pages -->
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>Face-Changing Filter</h1>
+        <h3>Crystal Zhou, 2025</h3>
+        <p class="project-summary">
+            A filter inspired by Sichuan opera’s bian lian masks and favorite childhood characters, creating an immersive, interactive experience.
+        </p>
+
+        <!-- Key Images -->
+        <div class="music-diary-images">
+            <img src="red.png" alt="Sichuan Opera Mask">
+            <img src="monkey.png" alt="Monkey King Mask">
+            <img src="kero.png" alt="Kero Mask">
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+        <p>
+            This filter is inspired by the 'face-changing' art of Sichuan opera (变脸, bian lian). The first mask is based on a traditional mask seen during bian lian performances, honoring this art. The other two masks are inspired by favorite childhood characters: the Monkey King and Kero (from Cardcaptor Sakura). Background scenes corresponding to each mask make the experience more immersive for the audience.
+        </p>
+    </section>
+
+    <!-- TECHNICAL APPROACH -->
+    <section class="project-section">
+        <h2>Technical Approach</h2>
+        <p><strong>Skills:</strong> JavaScript, HTML, CSS, Face Tracking</p>
+        <p>
+            I built this interactive filter using face-tracking techniques in JavaScript. Each mask appears dynamically as the user moves their head, with background layers enhancing the immersive effect. The project combines traditional cultural elements with personal nostalgic characters to create a playful yet respectful interactive experience.
+        </p>
+
+        <div class="links">
+            Links:
+            <ul>
+                <li>
+                    <a href="https://zhouc658.github.io/css_grid/html/up.html" target="_blank">View Live Demo</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+</body>
+</html>

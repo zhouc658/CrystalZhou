@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CAUTION | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch("../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>CAUTION</h1>
+        <h3>Crystal Zhou, 2023</h3>
+        <p class="project-summary">
+            A digital poster exploring the consequences of our digital footprint and the hidden harm created behind anonymous screens.
+        </p>
+
+        <!-- Large Image on its own row -->
+        <div class="project-images-single">
+            <img src="poster.jpg" alt="CAUTION Poster by Crystal Zhou">
+        </div>
+    </section>
+
+    <!-- PROJECT DETAILS -->
+    <section class="project-section">
+        <h2>Project Details</h2>
+        <p><strong>Medium:</strong> Digital Media</p>
+        <p><strong>Size:</strong> 13 × 19 in</p>
+        <p><strong>Software:</strong> Procreate</p>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+        <p>
+            <em>CAUTION</em> addresses the lasting impact of our digital footprint. In an era where posting online often feels casual and consequence-free, this poster reflects on how harmful actions behind a screen can affect others — and eventually return to the perpetrator.
+        </p>
+
+        <p>
+            The composition depicts a masked figure illuminated by the glow of a MacBook, with red monster hands reaching toward their neck. The mask symbolizes anonymity and the idea that anyone can become the perpetrator behind the screen. Its shattered-glass eyes represent willful blindness — individuals who refuse to seek truth and instead choose to spread harm. The exaggerated clown-like smile suggests mockery and attention-seeking behavior, emphasizing the performative cruelty often seen online.
+        </p>
+
+        <p>
+            Toxic comments fill the background within the MacBook’s glow, reflecting the real language frequently encountered on social platforms. The comments are set in Arial, chosen for its similarity to commonly used online fonts. Neon colors dominate the palette to evoke digital environments, while the MacBook shares these hues to reinforce the connection between user and platform.
+        </p>
+
+        <p>
+            The red monster hands act as a symbolic warning — a manifestation of karma. They represent the harm created through digital actions, waiting to “strike back.” Through this work, I aim to caution viewers that anonymity does not erase responsibility, and that digital harm leaves a trace.
+        </p>
+    </section>
+
+</body>
+</html>

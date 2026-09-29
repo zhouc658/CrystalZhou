@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Diary | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div id="navbar"></div>
+
+<script>
+fetch("../nav.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+<!-- PROJECT HEADER -->
+<section class="project-header">
+    <h1>Music Diary</h1>
+    <h3>Crystal Zhou, 2025</h3>
+    <p class="project-summary">
+        Music Diary transforms my music listening habits and moods into dynamic visuals using lines, colors, and symbols, revealing patterns in daily emotions and routines.
+    </p>
+
+    <!-- Key Images / Visual Hook (replace with actual images) -->
+    <div class="music-diary-images">
+        <img src="study.png" alt="Music Diary Screenshot 1">
+        <img src="walk.png" alt="Music Diary Screenshot 2">
+        <img src="relax.png" alt="Music Diary Screenshot 3">
+    </div>
+</section>
+
+<!-- DESCRIPTION -->
+<section class="project-section">
+    <h2>Description</h2>
+    <p>
+        Music Diary is an interactive project that visualizes my music listening habits and moods using lines, colors, and symbols. The visuals adapt to my listening patterns, revealing connections between songs, activities, and emotions. This project turns personal data into a reflective experience that highlights patterns in daily life.
+    </p>
+</section>
+
+<!-- TECHNICAL APPROACH -->
+<section class="project-section">
+    <h2>Technical Approach</h2>
+    <p><strong>Skills:</strong> JavaScript, HTML, CSS, Procreate</p>
+    <p>
+        This interactive data visualization was built using JavaScript, HTML, and CSS. You enter the number of songs you’ve listened to in each category and the line for the category with the highest number shines, highlighting the dominant mood. Symbols represent each song type and their size and quantity reflect the input data. For example, ten songs produce one big symbol while twenty-one songs produce one big symbol plus one small symbol. Press the spacebar to move between scenes. All data is stored locally, allowing the visualization to evolve over time, and pressing C clears everything to start fresh. Because it responds to real input, each scene is unique, showing how listening habits and emotions shift over time.
+    </p>
+
+<div class="links">
+    Links:
+    <ul>
+        <li>
+            <a href="https://zhouc658.github.io/CD-Interaction/Self_System/intro.html" target="_blank">
+                View Music Diary Live Here
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/zhouc658/CD-Interaction/tree/main/Self_System" target="_blank">
+                GitHub Repository
+            </a>
+        </li>
+    </ul>
+</div>
+</section>
+
+</body>
+</html>

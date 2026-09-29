@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Land | Crystal Zhou</title>
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <script>
+        fetch("../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>Blossom Land</h1>
+        <h3>Crystal Zhou, 2025</h3>
+
+        <p class="project-summary">
+            A physics-driven Rube Goldberg Machine designed in Unity that creates playful, visually engaging interactions with flowers and sweets.
+        </p>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+        <p>
+            This project designs and builds a physics-driven Rube Goldberg Machine using Unity. Chained 3D interactions, materials, sound effects, camera framing, motion, and lighting combine to create a playful, immersive experience. The machine triggers whimsical outcomes, like flowers popping or sweets rolling, providing a fun, visually rich demonstration of cause-and-effect in a digital environment.
+        </p>
+    </section>
+
+    <!-- TECHNICAL APPROACH -->
+    <section class="project-section">
+        <h2>Technical Approach</h2>
+        <p><strong>Skills:</strong> Unity, C#, 3D modeling, materials, sound design, lighting</p>
+        <div class="video-container">
+            <video controls>
+                <source src="demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Zhou's About Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hero Logo -->
+    <header class="hero-logo">
+        <div class="hero-logo-inner">
+            <img src="./asset/logo.PNG" alt="CZ Logo">
+            <h1 class="hero-logo-title">Crystal Zhou</h1>
+        </div>
+    </header>
+
+    <div id="navbar"></div>
+
+    <!-- Intro text -->
+    <section class="about">
+        <div class="about-text">
+            <p>
+                I am an interactive media artist and game designer exploring systems of participation, control, and
+                embodied interaction.
+            </p>
+
+            <p>
+                My work spans interactive installations, digital games, and web-based experiences. I am interested in
+                how interfaces shape behavior and how play can become a form of critical engagement.
+            </p>
+        </div>
+        <div class="scroll-hint">
+            <span class="scroll-hint-text">Scroll</span>
+            <span class="scroll-arrow">↓</span>
+        </div>
+    </section>
+
+    <!-- Work: one full screen per project, fade in/out on scroll -->
+    <section class="work-scroll">
+        <div class="work-jump-nav">
+            <a href="#creative-technology-first">Creative Technology</a>
+            <a href="#graphic-design-first">Graphic Design</a>
+        </div>
+
+        <div id="creative-technology" class="work-section-head" data-animate>
+            <h2 class="work-section-title">Creative Technology</h2>
+        </div>
+
+        <article id="creative-technology-first" class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./asset/YourLifePages/start.png" alt="Your Life Pages">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./LifePages/LifePages.html">Your Life Pages</a></h3>
+                <p>Users take control of accelerated time through work, social, and personal tasks, revealing how habits shape life.</p>
+                <a class="view-project" href="./LifePages/LifePages.html">View project →</a>
+            </div>
+        </article>
+
+        <article id="graphic-design-first" class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./asset/MusicDiary/MusicDiary.png"
+                         alt="Music Diary"
+                         data-slides="./asset/MusicDiary/MusicDiary.png, ./MusicDiary/relax.png, ./MusicDiary/walk.png, ./MusicDiary/study.png">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./MusicDiary/MusicDiary.html">Music Diary</a></h3>
+                <p>Transforms music listening habits into dynamic visuals using lines, colors, and symbols to reveal patterns in daily emotions.</p>
+                <a class="view-project" href="./MusicDiary/MusicDiary.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./asset/Shadow/poster.png"
+                         alt="Our Shadow Puppet Show"
+                         data-slides="./asset/Shadow/poster.png, ./Shadow/player.png, ./Shadow/end.png">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./Shadow/Shadow.html">Our Shadow Puppet Show</a></h3>
+                <p>Viewers bring hand shadow puppets to life, triggering animated scenes exploring play, memory, and imagination.</p>
+                <a class="view-project" href="./Shadow/Shadow.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./asset/Train/map.png"
+                         alt="People Behavior on the 7 Train"
+                         data-slides="./asset/Train/map.png, ./Train/line.png">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./Train/Train.html">People Behavior on the 7 Train</a></h3>
+                <p>This project uses data I collected over three days to visualize how passengers in the first car of the 7 local train use their phones, interact, or stay disengaged, revealing patterns of connection and isolation in a shared public space.</p>
+                <a class="view-project" href="./Train/Train.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./BlossomLand/thumbnail.png" alt="Blossom Land">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./BlossomLand/land.html">Blossom Land</a></h3>
+                <p>A physics-driven Rube Goldberg Machine designed in Unity that creates playful, visually engaging interactions with flowers and sweets.</p>
+                <a class="view-project" href="./BlossomLand/land.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./mask/red.png"
+                         alt="Face Changing art of Sichuan Opera"
+                         data-slides="./mask/red.png, ./mask/monkey.png, ./mask/kero.png">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./mask/mask.html">Face Changing art of Sichuan Opera</a></h3>
+                <p>A filter inspired by Sichuan opera's bian lian masks and favorite childhood characters, creating an immersive, interactive experience.</p>
+                <a class="view-project" href="./mask/mask.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./quiz/start.png"
+                         alt="Let's Shop!"
+                         data-slides="./quiz/start.png, ./quiz/quiz.png, ./quiz/receipt.png">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./quiz/quiz.html">Let's Shop!</a></h3>
+                <p>A short quiz designed to help newcomers explore the world of blindboxes and get personalized suggestions.</p>
+                <a class="view-project" href="./quiz/quiz.html">View project →</a>
+            </div>
+        </article>
+
+        <div id="graphic-design" class="work-section-head" data-animate>
+            <h2 class="work-section-title">Graphic Design</h2>
+        </div>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./newsletter/page.png"
+                         alt="Blind Box"
+                         data-slides="./newsletter/page.png, ./newsletter/start.png">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./newsletter/nl.html">Blind Box</a></h3>
+                <p>A typography-focused newsletter exploring blindbox culture, balancing visual storytelling and text to engage readers while educating them about the origins and history of blindboxes.</p>
+                <a class="view-project" href="./newsletter/nl.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./logo/front.JPG" alt="Personal Logo Design">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./logo/logo.html">Personal Logo Design</a></h3>
+                <p>An elegant and dreamy monogram logo that extends into a personalized ID card, exploring how a visual identity can evolve across formats.</p>
+                <a class="view-project" href="./logo/logo.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./cdCover/cdCover.JPEG" alt="My Happy MUSIC">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./cdCover/cd.html">My Happy MUSIC</a></h3>
+                <p>My Happy MUSIC visualizes how music transforms the emotional experience of working, turning stress and pressure into focus, enjoyment, and creative energy.</p>
+                <a class="view-project" href="./cdCover/cd.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./cautious/poster.jpg" alt="CAUTION">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./cautious/cautious.html">CAUTION</a></h3>
+                <p><em>CAUTION</em> addresses the lasting impact of our digital footprint. In an era where posting online often feels casual and consequence-free, this poster reflects on how harmful actions behind a screen can affect others and eventually return to the perpetrator.</p>
+                <a class="view-project" href="./cautious/cautious.html">View project →</a>
+            </div>
+        </article>
+
+        <article class="work-block" data-animate>
+            <div class="work-sticky">
+                <div class="work-image">
+                    <img src="./chinese/chinese.jpg" alt="Chinese New Year Traditions">
+                </div>
+            </div>
+            <div class="work-copy">
+                <h3><a href="./chinese/chinese.html">Chinese New Year Traditions</a></h3>
+                <p>A filter inspired by Sichuan opera's bian lian masks and favorite childhood characters, creating an immersive, interactive experience.</p>
+                <a class="view-project" href="./chinese/chinese.html">View project →</a>
+            </div>
+        </article>
+    </section>
+
+    <script>
+        (function () {
+            var heads = document.querySelectorAll('.work-section-head[data-animate]');
+            var workBlocks = Array.prototype.slice.call(document.querySelectorAll('.work-block[data-animate]'));
+            var workCopies = Array.prototype.slice.call(document.querySelectorAll('.work-copy'));
+
+            var headObserver = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                    } else {
+                        entry.target.classList.remove('in-view');
+                    }
+                });
+            }, { root: null, rootMargin: '0px', threshold: 0.3 });
+
+            heads.forEach(function (el) { headObserver.observe(el); });
+
+            function updateCopyVisibility() {
+                // Hide title + description only when they reach the very top of the viewport.
+                var hideStart = 0;
+                var fadeDistance = 56;
+
+                workCopies.forEach(function (copy) {
+                    var top = copy.getBoundingClientRect().top;
+                    var opacity = (top - hideStart) / fadeDistance;
+                    opacity = Math.max(0, Math.min(1, opacity));
+                    copy.style.opacity = opacity.toFixed(3);
+                });
+            }
+
+            function updateActiveBlock() {
+                if (!workBlocks.length) return;
+
+                // After intro is out of view, make top cover more opaque
+                if (window.scrollY > window.innerHeight * 0.95) {
+                    document.body.classList.add('work-deep');
+                } else {
+                    document.body.classList.remove('work-deep');
+                }
+
+                // While we're still near the top (About section), don't show any work images yet
+                if (window.scrollY < window.innerHeight * 0.76) {
+                    workBlocks.forEach(function (b) { b.classList.remove('in-view'); });
+                    workCopies.forEach(function (copy) { copy.style.opacity = '1'; });
+                    return;
+                }
+
+                var viewportCenter = window.innerHeight / 2;
+                var bestBlock = null;
+                var bestDist = Infinity;
+
+                workBlocks.forEach(function (b) {
+                    var rect = b.getBoundingClientRect();
+                    var blockCenter = rect.top + rect.height / 2;
+                    var dist = Math.abs(blockCenter - viewportCenter);
+                    if (dist < bestDist) {
+                        bestDist = dist;
+                        bestBlock = b;
+                    }
+                });
+
+                workBlocks.forEach(function (b) {
+                    if (b === bestBlock) {
+                        b.classList.add('in-view');
+                    } else {
+                        b.classList.remove('in-view');
+                    }
+                });
+
+                updateCopyVisibility();
+            }
+
+            function initSlideshows() {
+                var slideImgs = document.querySelectorAll('.work-image img[data-slides]');
+                slideImgs.forEach(function (img) {
+                    var frames = img.getAttribute('data-slides')
+                        .split(',')
+                        .map(function (s) { return s.trim(); })
+                        .filter(Boolean);
+                    if (frames.length <= 1) return;
+
+                    var index = 0;
+                    img.classList.add('slideshow-img');
+
+                    setInterval(function () {
+                        img.classList.add('slideshow-fade-out');
+                        setTimeout(function () {
+                            index = (index + 1) % frames.length;
+                            img.src = frames[index];
+                            img.classList.remove('slideshow-fade-out');
+                        }, 250);
+                    }, 2600);
+                });
+            }
+
+            window.addEventListener('scroll', updateActiveBlock, { passive: true });
+            window.addEventListener('resize', updateActiveBlock);
+            updateActiveBlock();
+            initSlideshows();
+        })();
+    </script>
+</body>
+
+</html>

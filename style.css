@@ -1,0 +1,475 @@
+/* Base Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color:  #052d64;
+    background-image:
+        radial-gradient(circle at 10% 15%, rgba(255, 246, 185, 0.18) 0, rgba(255, 246, 185, 0) 45%),
+        radial-gradient(circle at 85% 5%, rgba(194, 225, 255, 0.18) 0, rgba(194, 225, 255, 0) 50%),
+        radial-gradient(circle at 15% 80%, rgba(255, 203, 250, 0.22) 0, rgba(255, 203, 250, 0) 40%),
+        linear-gradient(180deg, #02051a 0%, #031239 40%, #052d64 75%, #041a38 100%);
+    background-attachment: fixed;
+    color: #04132e;
+    font-family: Georgia, serif;
+}
+
+/* -------------------- HERO LOGO -------------------- */
+.hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 72px 16px 48px;
+}
+
+.hero-logo-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-logo-inner img {
+    width: 180px;
+    height: auto;
+    filter: drop-shadow(0 0 18px rgba(255, 246, 185, 0.7));
+    animation: logoFloat 4.5s ease-in-out infinite;
+}
+
+.hero-logo-title {
+    margin: 32px 0 0;
+    font-size: 28px;
+    color: #fff6b9;
+    letter-spacing: 0.03em;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(3deg) scale(1);
+    }
+    50% {
+        transform: translateY(-10px) rotate(-3deg) scale(1.08);
+    }
+}
+/* NAV BAR */
+nav {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Logo takes more space, others evenly divided */
+nav .logo {
+    flex: 2; /* logo section wider */
+}
+
+/* Make links fill their div */
+nav a {
+    display: block;
+    padding: 20px 0; /* fixed button height */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px; /* base font size for menu links */
+    color: #fef7c6;
+    transition: all 0.3s ease;
+}
+
+/* Logo button fixed height */
+nav .logo a {
+    background-color: #0c3a7a;
+    color:#fff6b9;
+    padding: 25px 0;   /* fixed height */
+    display: flex;
+    align-items: center;
+}
+
+/* Scale text and image */
+nav .logo a span {
+    display: inline-block;
+    font-size: 16px;       /* normal base size */
+    transform: scale(1.6); /* visually larger */
+}
+
+nav .logo img {
+    height: 43px;           /* small base height */
+    transform: scale(2);    /* visually larger without increasing box */
+    margin-right: 80px;
+    margin-left: 50px;
+}
+
+/* Hover effect */
+nav a:hover {
+    text-shadow: 0 0 10px #fdf1a7;
+}
+
+/* Active / clicked link (text only) */
+nav a.active {
+    color: rgba(255, 241, 167, 0.7);
+    text-shadow: 0 0 12px #fdf1a7;
+}
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* -------------------- ABOUT SECTION -------------------- */
+.about {
+    max-width: 900px;
+    margin: -8px auto 24px;
+    padding: 0 40px;
+}
+
+.about-text h1 {
+    font-size: 32px;
+    text-align: center;
+    color: #fffeec;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ecf4ff;
+}
+
+.scroll-hint {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    color: #fff6b9;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.scroll-arrow {
+    font-size: 16px;
+    animation: arrowBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50%      { transform: translateY(4px); opacity: 1; }
+}
+
+/* -------------------- WORK SCROLL: fixed center image, description scrolls up; image fades between works -------------------- */
+.work-scroll {
+    max-width: 100%;
+    margin: 45vh 0 0 0;
+    padding: 0;
+}
+
+.work-jump-nav {
+    width: 40%;
+    margin-left: 60%;
+    padding: 0 40px 12px 24px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 12px;
+    position: sticky;
+    top: 41vh;
+    z-index: 4;
+}
+
+.work-jump-nav a {
+    display: inline-block;
+    padding: 2px 0;
+    color: #fffbe0;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.work-jump-nav a + a {
+    margin-left: 6px;
+    padding-left: 14px;
+    border-left: 1px solid rgba(255, 246, 185, 0.6);
+}
+
+.work-jump-nav a:hover {
+    color: #fdf1a7;
+    text-shadow: 0 0 12px rgba(253, 241, 167, 0.72);
+}
+
+/* Anchor jump offset so first project text stays visible under section title */
+#creative-technology-first,
+#graphic-design-first {
+    scroll-margin-top: 28vh;
+}
+
+/* Section title: above descriptions, sticky; description fades in and stays hidden (solid above + gradient) */
+.work-section-head {
+    position: sticky;
+    top: 46vh;
+    width: 40%;
+    margin-left: 60%;
+    padding: 0 40px 48px 24px;
+    box-sizing: border-box;
+    z-index: 3;
+    background: linear-gradient(to bottom, #052d64 0%, #052d64 16px, rgba(5, 45, 100, 0.95) 40%, rgba(5, 45, 100, 0.7) 70%, rgba(5, 45, 100, 0.0) 100%);
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    pointer-events: none;
+}
+
+/* Cover the gap above the sticky title so descriptions never reappear on top */
+.work-section-head::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 46vh;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 45, 100, 0) 0%,
+        rgba(5, 45, 100, 0.35) 10%,
+        rgba(5, 45, 100, 0.92) 24%,
+        #052d64 40%,
+        #052d64 100%
+    );
+}
+
+/* Once intro is gone, strengthen top cover so scrolled-up text is hidden */
+body.work-deep .work-section-head::before {
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 45, 100, 0.25) 0%,
+        rgba(5, 45, 100, 0.88) 16%,
+        #052d64 32%,
+        #052d64 100%
+    );
+}
+
+.work-section-head.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.work-section-title {
+    font-size: 28px;
+    color: #fef7c6;
+    margin: 0;
+}
+
+/* Each project = tall block so description can scroll from center to top; image is fixed and fades per block */
+.work-block {
+    position: relative;
+    min-height: 74vh;
+    min-height: 74dvh;
+}
+
+/* Image: fixed in center of viewport; only visible when this block is in view (fade in/out) */
+.work-sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 60%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px 0 40px;
+    box-sizing: border-box;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.work-block.in-view .work-sticky {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.work-sticky .work-image {
+    max-width: 100%;
+    max-height: 90vh;
+    max-height: 90dvh;
+}
+
+.work-image a {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    pointer-events: auto;
+}
+
+.work-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 90vh;
+    max-height: 90dvh;
+    display: block;
+    vertical-align: middle;
+}
+
+.slideshow-img {
+    transition: opacity 0.25s ease-in-out;
+}
+
+.slideshow-fade-out {
+    opacity: 0;
+}
+
+/* First project's image: keep consistent size and away from copy */
+.work-block:first-of-type .work-sticky .work-image {
+    margin-top: 0;
+}
+
+.work-block:first-of-type .work-image img {
+    max-width: 90%;
+}
+
+/* Description: in flow so it scrolls; starts just above center of image; scrolls up and disappears inside the title block (never past it) */
+.work-copy {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    margin-left: 60%;
+    padding: 28vh 40px 14vh 24px;
+    box-sizing: border-box;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 14%, #000 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000 14%, #000 100%);
+}
+
+/* Keep the active last project's text fixed below the section title */
+@media (min-width: 901px) {
+    .work-block:last-of-type.in-view .work-copy {
+        position: sticky;
+        top: 28vh;
+        -webkit-mask-image: none;
+        mask-image: none;
+        opacity: 1 !important;
+    }
+}
+
+.work-copy h3 {
+    margin: 0 0 16px;
+    font-size: 26px;
+    color: #fffeec;
+}
+
+.work-copy h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.work-copy h3 a:hover {
+    color: #fff6b9;
+}
+
+.work-copy p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #ecf4ff;
+}
+
+.view-project {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff6b9;
+    text-decoration: none;
+}
+
+.view-project::after {
+    content: '';
+}
+
+.view-project:hover {
+    text-decoration: underline;
+}
+
+/* Mobile: image no longer fixed; stack image then description, normal scroll */
+@media (max-width: 900px) {
+    .work-jump-nav {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 20px 20px;
+        flex-wrap: wrap;
+    }
+
+    .work-section-head {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 20px 24px;
+    }
+
+    .work-block {
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 60px;
+    }
+
+    .work-sticky {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: 100%;
+        height: auto;
+        padding: 24px 20px 16px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .work-block.in-view .work-sticky {
+        opacity: 1;
+    }
+
+    .work-sticky .work-image {
+        max-height: none;
+    }
+
+    .work-image img {
+        max-height: 70vh;
+    }
+
+    .work-copy {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 20px 48px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-scroll {
+        padding: 0 20px 60px;
+    }
+
+    .work-section-title {
+        font-size: 24px;
+    }
+
+    .work-copy h3 {
+        font-size: 22px;
+    }
+
+    .work-copy p {
+        font-size: 16px;
+    }
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about {
+        padding: 0 20px;
+    }
+}

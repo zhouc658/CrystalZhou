@@ -1,0 +1,128 @@
+/* About uses the established Home/Work palette and masthead verbatim. */
+.page-about { --color-paper: #fff7e5; --color-ink: #20150f; --color-muted: #66574b; --color-red: #e94655; --color-pink: #ffd5d7; --color-rule: #f5b9b1; --font-meta: "Courier New", Courier, monospace; background: var(--color-paper); }
+.page-about .site-header { border-bottom: 0; }
+.page-about .site-header-inner { min-height: 6.2rem; gap: 1.75rem; }
+.page-about .site-brand { font: 700 clamp(2rem, 4.6vw, 4.3rem)/1 Georgia, serif; letter-spacing: -0.07em; }
+.page-about .site-nav { margin-left: auto; gap: clamp(1rem, 2.2vw, 2rem); }
+.page-about .site-nav a { font: 600 0.8125rem/1 var(--font-meta); letter-spacing: 0; }
+.page-about .site-header.is-scrolled .site-header-inner { min-height: 4.8rem; }
+.header-meta { display: flex; justify-content: space-between; gap: 1rem; padding-block: 0.5rem; position: relative; font: 600 0.8125rem/1.4 var(--font-meta); }
+.header-meta::before, .header-meta::after { content: ""; position: absolute; left: var(--page-gutter); right: var(--page-gutter); border-top: 1px solid var(--color-rule); }
+.header-meta::before { top: 0; }.header-meta::after { bottom: 0; }
+.header-meta p:first-child { color: var(--color-red); }
+.header-meta p:last-child { text-transform: uppercase; }
+.header-meta p span { padding-inline: 0.7rem; }
+.editorial-star { display: inline-block; width: 2rem; height: 2.8rem; flex-shrink: 0; background: var(--color-red); clip-path: polygon(50% 0, 60% 33%, 75% 43%, 100% 50%, 75% 57%, 60% 67%, 50% 100%, 40% 67%, 25% 57%, 0 50%, 25% 43%, 40% 33%); }
+
+.about-main { padding-top: 2.5rem; }
+.about-hero { display: grid; grid-template-columns: minmax(0, 45fr) minmax(0, 55fr); gap: 1.5rem; align-items: center; padding-bottom: 2.5rem; }
+.about-copy { padding-right: 1.5rem; }
+.about-copy h1 { width: fit-content; margin-bottom: 1.7rem; white-space: nowrap; font: 700 clamp(2rem, 4.1vw, 3.8rem)/1.1 Georgia, serif; letter-spacing: -0.055em; }
+.about-copy h1 em { position: relative; isolation: isolate; display: inline-block; padding: 0.04em 0.17em; margin-left: 0.08em; transform: rotate(-3deg); }
+.about-copy h1 em::before, .skill-paper::before { content: ""; position: absolute; z-index: -1; inset: 0; background: var(--paper-fill, var(--color-pink)); clip-path: polygon(1% 4%, 25% 1%, 42% 3%, 74% 0, 98% 3%, 96% 18%, 100% 33%, 97% 49%, 100% 71%, 96% 86%, 99% 97%, 73% 95%, 46% 100%, 22% 97%, 0 99%, 2% 80%, 0 64%, 3% 45%, 0 28%); }
+.about-copy p { max-width: 40ch; font: 400 clamp(0.85rem, 1.12vw, 1rem)/1.65 var(--font-meta); }
+.about-copy p + p { margin-top: 1.25rem; }
+.personal-collage { position: relative; width: 100%; aspect-ratio: 1.05; isolation: isolate; }
+.photo-slot { position: absolute; margin: 0; padding: 1.2% 1.2% 3%; background: #fffdf5; box-shadow: 0 2px 7px #30201018; transform: rotate(var(--photo-angle)); transition: transform 250ms ease, box-shadow 250ms ease; }
+.photo-slot img, .photo-placeholder { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo-placeholder { display: grid; place-items: center; background: #e9e5dc; border: 1px solid #d8d2c5; color: var(--color-muted); }
+.photo-placeholder span { padding: 0.6rem; font: 400 clamp(0.6rem, 0.9vw, 0.8rem)/1.5 var(--font-meta); text-align: center; }
+.photo-portrait { --photo-angle: -6deg; left: 12%; top: 17%; width: 37%; height: 48%; z-index: 3; }
+.photo-city { --photo-angle: -8deg; left: 39%; top: 1%; width: 40%; height: 49%; z-index: 1; }
+.photo-daily { --photo-angle: 5deg; right: 0; top: 17%; width: 26%; height: 31%; z-index: 2; }
+.photo-detail { --photo-angle: -4deg; left: 3%; top: 60%; width: 24%; height: 25%; z-index: 2; }
+.photo-places { --photo-angle: 5deg; left: 25%; top: 65%; width: 38%; height: 32%; z-index: 4; }
+.photo-object { --photo-angle: 4deg; right: 4%; top: 69%; width: 25%; height: 29%; z-index: 5; }
+.city-note { position: absolute; z-index: 6; right: 0; top: 47%; width: 27%; padding: 1rem 0.4rem; background: #ffdde1; color: var(--color-red); text-align: center; font: 400 clamp(1rem, 1.8vw, 1.65rem)/1.35 "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive; transform: rotate(-3deg); }
+.collage-tape { position: absolute; pointer-events: none; background: var(--tape-color); opacity: 0.65; clip-path: polygon(0 4%, 16% 0, 32% 5%, 63% 0, 98% 3%, 96% 37%, 100% 65%, 96% 100%, 70% 95%, 31% 100%, 0 96%); }
+.tape-yellow { --tape-color: #f8e6ac; z-index: 4; left: 13%; top: 13%; width: 12%; height: 9%; transform: rotate(-10deg); }
+.tape-blue { --tape-color: #c4e2f6; z-index: 0; right: -1%; top: 1%; width: 20%; height: 16%; transform: rotate(12deg); }
+.tape-pink { --tape-color: #f3d2d6; z-index: 1; left: 1%; top: 54%; width: 15%; height: 12%; transform: rotate(-7deg); }
+.collage-line { position: absolute; pointer-events: none; left: -5%; bottom: 0; width: 25%; height: 23%; z-index: 5; fill: none; stroke: var(--color-red); stroke-width: 1.2; }
+.about-section { border-top: 1px solid var(--color-red); padding-block: 1.5rem; }
+.about-section h2 { margin-bottom: 1rem; color: var(--color-red); font: 700 clamp(1.4rem, 2.2vw, 1.9rem)/1.1 Georgia, serif; text-transform: uppercase; letter-spacing: -0.035em; }
+.resume-entry { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.5rem; align-items: start; }
+.resume-entry h3 { margin-bottom: 0.3rem; font: 700 clamp(1.05rem, 1.6vw, 1.4rem)/1.25 Georgia, serif; }
+.resume-entry p { font: 400 0.85rem/1.6 var(--font-meta); }
+.resume-entry .entry-dates { text-align: right; white-space: nowrap; }
+.entry-dates span { display: block; color: var(--color-muted); }
+.entry-organization { color: var(--color-muted); margin-bottom: 0.2rem; }
+.experience .resume-entry + .resume-entry { border-top: 1px solid #e7dece; margin-top: 1rem; padding-top: 1rem; }
+.skills-resume { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 1.5rem; padding-block: 1.8rem; }
+.skills-list { margin: 0; }
+.skills-list > div { display: grid; grid-template-columns: 8.5rem minmax(0, 1fr); gap: 1rem; align-items: start; padding-block: 0.8rem; }
+.skills-list > div + div { border-top: 1px solid #e7dece; }
+.skills-list dd { margin: 0; font: 400 0.75rem/1.6 var(--font-meta); }
+.skill-paper { position: relative; isolation: isolate; display: inline-block; padding: 0.2rem 0.6rem; transform: rotate(-3deg); font: italic 400 1.3rem/1.3 "Bradley Hand", "Segoe Print", Georgia, serif; }
+.skill-development { --paper-fill: #c4e2f6; }
+.skill-other { --paper-fill: #ffedb5; }
+.resume-panel { border-left: 1px solid var(--color-red); padding-left: 1.5rem; }
+.resume-content { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 1.2rem; align-items: center; }
+.document-preview { position: relative; aspect-ratio: 0.72; max-height: 14rem; margin: 0.5rem; }
+.document-sheet { position: absolute; width: 79%; height: 89%; background: #fffefa; border: 1px solid #ece7dc; box-shadow: 0 2px 4px #30201012; }
+.sheet-back { left: 2%; top: 0; transform: rotate(7deg); }
+.sheet-front { left: 15%; top: 8%; transform: rotate(-10deg); padding: 15% 10%; display: flex; flex-direction: column; gap: 7%; }
+.document-sheet span { display: block; border-top: 1px solid #c9c5bd; }
+.document-sheet .document-heading { width: 65%; border-top: 3px solid #a4a098; margin-bottom: 10%; }
+.document-sheet .short-line { width: 70%; }
+.resume-download p { font: 400 0.75rem/1.7 var(--font-meta); }
+.download-resume { display: inline-flex; align-items: center; justify-content: space-between; gap: 0.8rem; padding: 0.7rem 0.9rem; border: 1px solid var(--color-red); margin-top: 1rem; color: var(--color-red); text-decoration: none; text-transform: uppercase; font: 400 0.7rem/1.4 var(--font-meta); transition: background 220ms ease, color 220ms ease; }
+.download-resume span { font-size: 1.25rem; transition: transform 220ms ease; }
+.download-resume:hover, .download-resume:focus-visible { background: var(--color-red); color: var(--color-paper); }
+.download-resume:hover span { transform: translateX(3px); }
+.page-about .site-footer { padding-block: 0 1.5rem; }
+.page-about .site-footer::before { border-color: var(--color-red); margin-bottom: 1.5rem; }
+.contact-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; font: 400 0.7rem/1.5 var(--font-meta); }
+.contact-row h2 { font: 600 0.8rem/1.4 var(--font-meta); text-transform: uppercase; }
+.contact-row p span { color: var(--color-muted); }
+.contact-row .editorial-star { width: 1.3rem; height: 1.8rem; }
+@media (hover: hover) and (pointer: fine) {
+ .photo-slot:hover { transform: translateY(-3px) rotate(calc(var(--photo-angle) * 0.65)); box-shadow: 0 4px 10px #30201022; }
+}
+@media (prefers-reduced-motion: no-preference) {
+ .about-copy h1 { animation: about-arrive 450ms ease both; }
+ .photo-slot { animation: photo-arrive 450ms ease both; animation-delay: calc(80ms + var(--photo-order) * 65ms); }
+ @keyframes about-arrive { from { opacity: 0; translate: 0 5px; } to { opacity: 1; translate: 0 0; } }
+ @keyframes photo-arrive { from { opacity: 0; translate: 0 5px; } to { opacity: 1; translate: 0 0; } }
+}
+@media (prefers-reduced-motion: reduce) { .photo-slot:hover { transform: rotate(var(--photo-angle)); } }
+@media (max-width: 1000px) {
+ .page-about .site-header-inner { gap: 1rem; }
+ .page-about .site-nav { gap: 0.9rem; }
+ .page-about .site-nav a { font-size: 0.7rem; }
+ .page-about .site-header-inner > .editorial-star { width: 1rem; }
+ .about-hero { gap: 0.7rem; }
+ .about-copy { padding-right: 0.7rem; }
+ .photo-portrait { left: 10%; width: 35%; }
+ .photo-daily { right: 1%; width: 24%; }
+ .city-note { padding-block: 0.6rem; }
+ .skills-list > div { grid-template-columns: 7rem minmax(0, 1fr); gap: 0.7rem; }
+ .skill-paper { font-size: 1.1rem; }
+ .resume-content { grid-template-columns: minmax(0, 1fr); }
+ .document-preview { width: 8rem; margin-inline: auto; }
+ .contact-row { flex-wrap: wrap; }
+}
+@media (max-width: 700px) {
+ .page-about .site-header-inner { min-height: 6.3rem; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: space-between; gap: 0; padding-block: 0.65rem; }
+ .page-about .site-brand { font-size: 2rem; }
+ .page-about .site-nav { order: 3; width: 100%; justify-content: space-between; margin-left: 0; }
+ .page-about .site-header.is-scrolled .site-header-inner { min-height: 5.8rem; }
+ .header-meta { font-size: 0.58rem; gap: 0.5rem; }
+ .header-meta p span { padding-inline: 0.1rem; }
+ .about-main { padding-top: 1.6rem; }
+ .about-hero { grid-template-columns: 1fr; gap: 1.8rem; padding-bottom: 1.8rem; }
+ .about-copy { padding: 0; }
+ .about-copy h1 { font-size: 1.9rem; margin-bottom: 1.2rem; }
+ .about-copy p { max-width: 52ch; }
+ .personal-collage { width: 94%; max-width: 31rem; justify-self: center; }
+ .photo-placeholder span { font-size: 0.65rem; }
+ .city-note { font-size: clamp(1rem, 4vw, 1.4rem); }
+ .resume-entry { grid-template-columns: 1fr; gap: 0.55rem; }
+ .resume-entry .entry-dates { text-align: left; font-size: 0.75rem; }
+ .skills-resume { grid-template-columns: 1fr; }
+ .resume-panel { border-left: 0; border-top: 1px solid var(--color-red); padding: 1.5rem 0 0; }
+ .resume-content { grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr); }
+ .document-preview { width: 100%; max-width: 9rem; }
+ .contact-row { gap: 0.8rem 1.2rem; }
+ .contact-row h2 { width: 100%; }
+}

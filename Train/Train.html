@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>People Behavior on the 7 Train | Crystal Zhou</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../project.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+
+    <script>
+        fetch("../nav.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("navbar").innerHTML = data;
+            });
+    </script>
+
+    <!-- PROJECT HEADER -->
+    <section class="project-header">
+        <h1>People Behavior on the 7 Train</h1>
+        <h3>Crystal Zhou, 2025</h3>
+        <p class="project-summary">
+            This project uses data I collected over three days to visualize how passengers in the first car of the 7
+            local train use their phones, interact, or stay disengaged, revealing patterns of connection and isolation
+            in a shared public space.
+        </p>
+
+        <!-- Key Images / Visual Hook -->
+        <div class="project-images">
+            <img src="line.png" alt="7 Train Visualization Station 1">
+            <img src="map.png" alt="7 Train Visualization Station 2">
+        </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+        <h2>Description</h2>
+        <p>
+            This project visualizes human behavior in the first cart of the 7 local train between Flushing–Main St and
+            74th St–Broadway, based on three days of data I collected on how passengers used their phones, interacted,
+            or remained disengaged. Users can explore each station, view heat maps, and compare patterns across days,
+            with light and color reflecting the energy and individuality of the environment.
+        </p>
+        <p>
+            The visualization emphasizes personal presence within a shared space, revealing how people occupy the same
+            environment yet often remain isolated or disconnected.
+        </p>
+    </section>
+
+    <!-- TECHNICAL APPROACH -->
+    <section class="project-section">
+        <h2>Technical Approach</h2>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+        <p>
+            I built the Subway visualization using JavaScript, with interactive features allowing users to drag the cart
+            to explore each station, toggle between dates, and view the cart’s heat map. HTML and CSS were used to
+            display the visualization and the project description on the webpage.
+        </p>
+
+         <!-- LINKS -->
+    <div class="links">
+        Links:
+        <ul>
+            <li>
+                <a href="https://zhouc658.github.io/CD-Interaction/city/" target="_blank">
+                    View People Behavior on the 7 Train
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/zhouc658/CD-Interaction/tree/main/city" target="_blank">
+                    GitHub Repository 
+                </a>
+            </li>
+        </ul>
+    </div>
+    </section>
+
+
+</body>
+
+</html>
