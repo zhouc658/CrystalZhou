@@ -1,0 +1,45 @@
+/* Local motion-project treatment; the portfolio masthead remains shared. */
+.project-motion .project-intro { grid-template-columns: minmax(0, 1fr) 11rem; padding-bottom: 2rem; }
+.project-motion .project-intro h1 { max-width: none; line-height: 1.02; overflow-wrap: normal; }
+.project-motion .project-deck { max-width: 46ch; font-size: clamp(1.1rem, 1.8vw, 1.5rem); line-height: 1.35; }
+.project-motion .project-annotation { background: none; padding: 0; transform: rotate(-5deg); font-size: 1rem; }
+.project-motion .project-hero video { aspect-ratio: 16 / 9; object-fit: contain; }
+/* Adjacent sections contribute 32–48px each, for a 64–96px rhythm. */
+.project-motion .project-hero { margin-bottom: 0; }
+.project-motion .project-section { padding-block: clamp(2rem, 3.4vw, 3rem); }
+.project-motion .project-overview { border-top: 0; padding-top: clamp(2rem, 3.4vw, 3rem); }
+.project-motion .section-heading { margin-bottom: 1.5rem; }
+.project-motion .section-copy > p { max-width: 62ch; }
+.project-motion .section-media { margin-top: 2rem; }
+.project-motion .media-block figcaption { margin-top: 0.75rem; }
+/* The progression sits beside the concept without stretching paragraph spacing. */
+.project-motion .layout-text .section-copy { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); column-gap: var(--project-gap); align-content: start; grid-auto-rows: min-content; }
+.project-motion .layout-text .section-heading, .project-motion .layout-text .section-copy > p { grid-column: 1; }
+.motion-progression { grid-column: 2; grid-row: 1 / span 6; align-self: start; display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 0; padding-left: var(--project-gap); border-left: 1px solid var(--color-rule); font: 0.8rem/1.65 var(--font-meta); }
+.motion-progression h3 { font: 700 0.8rem/1.5 var(--font-meta); text-transform: uppercase; margin-bottom: 0.3rem; }
+.motion-progression div p:first-of-type { margin-bottom: 0.45rem; }
+.progression-arrow { align-self: center; color: var(--color-red); }
+.progression-summary { grid-column: 1 / -1; color: var(--color-muted); font-size: 0.7rem; }
+/* Natural-height columns avoid empty grid cells below shorter storyboard sheets. */
+.project-motion .layout-pair .section-media { display: block; columns: 2; column-gap: 1.5rem; max-width: 66rem; margin-inline: auto; }
+.project-motion .layout-pair .media-block { break-inside: avoid; margin-bottom: 1.5rem; }
+.project-motion .layout-collage .section-media { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; align-items: start; }
+.project-motion .layout-collage .media-block:nth-child(n) { grid-column: auto; margin: 0; }
+.project-motion .layout-collage .media-block img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; }
+.motion-colors { padding-top: 0.5rem; }
+.color-group { display: flex; flex-wrap: wrap; gap: 1rem; }
+.swatch { width: 3.2rem; font: 0.65rem/1.5 var(--font-meta); text-transform: uppercase; }
+.swatch::before { content: ''; display: block; height: 0.8rem; margin-bottom: 0.6rem; background: var(--swatch); }
+.blue { --swatch: #567ca6; }.yellow { --swatch: #e9cb70; }.purple { --swatch: #ab86d5; }.pink { --swatch: #e94a9e; }
+.color-arrow { display: block; margin-block: 1.5rem; color: var(--color-muted); }
+@media (max-width: 600px) {
+ .project-motion .project-intro { grid-template-columns: 1fr; gap: 1rem; }
+ .project-motion .project-intro-aside { align-items: center; }
+ .project-motion .project-annotation { margin: 0; font-size: 0.9rem; }
+ .project-motion .layout-text .section-copy { display: block; }
+ .motion-progression { margin-top: 2rem; }
+ .progression-arrow { transform: none; }
+ .project-motion .layout-pair .section-media { columns: 1; }
+ .project-motion .layout-collage .section-media { grid-template-columns: 1fr; gap: 1.5rem; }
+ .project-motion .layout-collage .media-block:nth-child(n) { grid-column: auto; margin-top: 0; }
+}

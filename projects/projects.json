@@ -1,0 +1,1390 @@
+[
+  {
+    "id": "furumi",
+    "path": "Furumi/furumi.html",
+    "title": "KOCEP",
+    "description": "I designed and built key parts of the matching experience, from how users provide the information needed for matching to how the system processes that information and presents potential collaborators.",
+    "category": "Product Design / UI·UX / Full-Stack Development",
+    "year": "2026",
+    "annotation": [
+      "Find your people.",
+      "Create together.",
+      "Build what you love."
+    ],
+    "hero": {
+      "type": "image",
+      "src": "Furumi/homePage.png",
+      "alt": "KOCEP homepage with Explore people, Create Your Drop, and Watch Projects entry points.",
+      "width": 3400,
+      "height": 1822
+    },
+    "overview": [
+      "Kocep is a student collaboration platform designed to help students and creators find people to work with based on what they can offer, what they need, and how they want to collaborate.",
+      "The platform explores how finding collaborators can go beyond simply browsing profiles. Kocep uses information such as skills, needs, availability, and collaboration preferences to help surface potentially relevant collaborators.",
+      "Kocep is an ongoing collaborative project. This case study focuses specifically on the parts of the matching experience that I contributed to designing and building."
+    ],
+    "role": [
+      "Product Design",
+      "UI/UX Design",
+      "Front-End Development",
+      "Back-End Development"
+    ],
+    "tools": [
+      "Voyage AI",
+      "Supabase"
+    ],
+    "sections": [
+      {
+        "title": "Matching System",
+        "layout": "text-image",
+        "aside": "kocep-contributions.html",
+        "paragraphs": [
+          "I worked on the matching algorithm that connects what users can offer with what other users are looking for. Information provided through the platform is stored in Supabase and used with semantic matching through Voyage AI as part of the matching process.",
+          "Potential collaborators are then ranked from highest to lowest compatibility percentage. Instead of only showing a score, the experience also explains why a person was matched, giving users more context before deciding whether they want to view their profile and connect."
+        ]
+      },
+      {
+        "title": "The Problem",
+        "layout": "text",
+        "paragraphs": [
+          "A list of profiles does not tell users who may be relevant, why they might work well together, or what to do next. Useful recommendations also depend on users first providing enough information about what they offer and need."
+        ]
+      },
+      {
+        "title": "Profile Completion Flow",
+        "layout": "text",
+        "paragraphs": [
+          "After logging in, users are guided through the information needed for matching, beginning with their profile and continuing into My Drop before reaching Find My People.",
+          "If a user returns without completing an important step, the platform encourages them to finish that step first. I designed this flow so users are less likely to reach the matching experience without providing the information the system needs to generate useful recommendations."
+        ],
+        "supplement": "kocep-profile-flow.html"
+      },
+      {
+        "title": "My Drop",
+        "layout": "full",
+        "paragraphs": [
+          "My Drop is where users communicate what they can bring to a collaboration and what they are looking for from someone else. This information becomes part of the data used by the matching system, making this step an important connection between profile setup and collaborator discovery."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Furumi/MyDrop.png",
+            "alt": "Kocep My Drop form showing skills offered, experience level, project interests, and a profile summary of what the user brings and seeks.",
+            "width": 3420,
+            "height": 1798
+          }
+        ]
+      },
+      {
+        "title": "Find My People",
+        "layout": "pair",
+        "paragraphs": [
+          "Find My People turns the matching system into an experience users can quickly understand and act on. Potential collaborators are ordered from highest to lowest compatibility, helping users prioritize who they may want to explore first.",
+          "Each match also provides context about why that person was recommended. From there, users can view the person's profile and contact/connect with them if they are interested in collaborating."
+        ],
+        "supplement": "kocep-decisions.html",
+        "media": [
+          {
+            "type": "image",
+            "src": "Furumi/matches.png",
+            "alt": "Kocep Find My People showing a 51% match and a View full profile action.",
+            "width": 1862,
+            "height": 1736,
+            "caption": "Actual interface · 51% compatibility shown in this result."
+          },
+          {
+            "type": "image",
+            "src": "Furumi/ProfileMatch.png",
+            "alt": "Kocep saved-match detail showing 52% compatibility, shared interests and collaboration preferences, and gaps between the skills offered and needed.",
+            "width": 2274,
+            "height": 1058,
+            "caption": "Actual saved-match detail · The explanation includes both common ground and unmet skill needs."
+          }
+        ]
+      },
+      {
+        "title": "Iteration / Process",
+        "layout": "text",
+        "paragraphs": [
+          "I approached the matching journey as a connected set of design decisions: help users complete the information needed, turn what they offer and need into recommendations, and connect each score to an explanation and a next step."
+        ],
+        "supplement": "kocep-flow.html"
+      },
+      {
+        "title": "Current Product",
+        "layout": "full",
+        "paragraphs": [
+          "Kocep remains an ongoing collaborative project. The current experience brings profile completion, My Drop, and collaborator discovery together; the screens here show the parts of that matching journey I contributed to designing and building."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Furumi/explore.png",
+            "alt": "KOCEP Explore interface with skill filtering and View full profile links for discovering people beyond ranked matches.",
+            "width": 1868,
+            "height": 1592,
+            "caption": "Current product · Users can also browse people beyond their matches."
+          }
+        ]
+      }
+    ],
+    "next": "jewelry",
+    "stylesheet": "Furumi/kocep.css",
+    "thumbnail": "Furumi/matches.png"
+  },
+  {
+    "id": "jewelry",
+    "path": "Jewelry/jewelry.html",
+    "title": "MILK & ROSE",
+    "description": "Selected earlier explorations from an ongoing brand and web design project for a jewelry label.",
+    "category": "Brand Design / Web Design / UI·UX / Front-End Development",
+    "year": "2026-05",
+    "overview": [
+      "Milk & Rose is an ongoing brand and web design project for a jewelry label. The project initially explored the possibility of developing a separate sister brand before shifting back toward evolving the existing Milk & Rose identity.",
+      "My work has included visual and competitor research, moodboards, typography and color exploration, web concepts, and front-end development. As the project has progressed, the visual direction has continued to change in response to the developing brand.",
+      "Because the redesign is still in progress, this case study focuses on selected earlier explorations rather than revealing the current unfinished direction."
+    ],
+    "role": [
+      "Brand Exploration",
+      "Web Design",
+      "UI/UX Design",
+      "Front-End Development"
+    ],
+    "tools": [],
+    "hero": {
+      "type": "image",
+      "src": "Jewelry/entryPage.png",
+      "width": 2804,
+      "height": 1606,
+      "alt": "Earlier Eldra landing-page exploration with a grid of burgundy television-like frames, a central sign-up form, and gold earrings.",
+      "caption": "Selected earlier exploration · Shown with the Eldra working name; not the current Milk & Rose direction."
+    },
+    "sections": [
+      {
+        "title": "Early Direction",
+        "layout": "full",
+        "paragraphs": [
+          "The project initially explored the possibility of creating a sister brand with a different identity. Early moodboards focused on a more elevated, high-end direction and helped establish an initial visual starting point for the project. This was an exploration rather than a finalized identity."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Jewelry/moodboard.png",
+            "width": 1924,
+            "height": 1078,
+            "alt": "Original moodboard combining red and black fashion imagery, metallic textures, jewelry, and digital editorial references.",
+            "caption": "Original moodboard · Color, texture, lifestyle, and technology references."
+          }
+        ]
+      },
+      {
+        "title": "Research",
+        "layout": "pair",
+        "paragraphs": [
+          "I researched how other jewelry and fashion brands use typography, imagery, color, layout, and digital presentation to establish a sense of identity. Rather than copying a specific visual language, I used this research to understand common conventions and identify opportunities for Milk & Rose to develop a more distinctive presence."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Jewelry/brandResearh1.png",
+            "width": 1544,
+            "height": 866,
+            "alt": "Research board on Shaun Leane, examining sculptural jewelry, typography, packaging, and brand positioning.",
+            "caption": "Shaun Leane · Sculptural identity and consistency."
+          },
+          {
+            "type": "image",
+            "src": "Jewelry/brandResearch2.png",
+            "width": 1690,
+            "height": 946,
+            "alt": "Research board on Rick Owens, examining its handwritten wordmark, monochromatic palette, and sculptural silhouettes.",
+            "caption": "Rick Owens · Form, texture, and a restrained palette."
+          },
+          {
+            "type": "image",
+            "src": "Jewelry/brandResearch3.png",
+            "width": 1328,
+            "height": 744,
+            "alt": "Rick Owens digital-presence research with website screenshots and notes on editorial imagery and navigation.",
+            "caption": "Rick Owens · Editorial presentation and e-commerce navigation."
+          },
+          {
+            "type": "image",
+            "src": "Jewelry/BrandResearch4.png",
+            "width": 1324,
+            "height": 750,
+            "alt": "Ze Luna research board with digital fashion references and notes on typography, visual experimentation, and accessibility.",
+            "caption": "Ze Luna · Digital experimentation and accessibility."
+          }
+        ]
+      },
+      {
+        "title": "Visual Exploration",
+        "layout": "collage",
+        "paragraphs": [
+          "Typography, color, image direction, and composition were explored together to test different ways the brand could position itself visually. These selected studies are earlier experiments, not finalized brand guidelines or the current identity."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Jewelry/logoExploration.png",
+            "width": 762,
+            "height": 1150,
+            "alt": "Hand-drawn letterform and monogram explorations with circular shapes, serifs, and fluid strokes.",
+            "caption": "Typography · Letterform and monogram studies."
+          },
+          {
+            "type": "image",
+            "src": "Jewelry/colorPalette1.png",
+            "width": 578,
+            "height": 324,
+            "alt": "Blood & Gold palette study with black, wine red, rust, cream, and gold, alongside reference imagery.",
+            "caption": "Color + image direction · Blood & Gold."
+          },
+          {
+            "type": "image",
+            "src": "Jewelry/colorpalette2.png",
+            "width": 1016,
+            "height": 572,
+            "alt": "Obsidian Tech palette study combining dark blue, charcoal, grey, bright red, and burgundy.",
+            "caption": "Color + composition · Obsidian Tech."
+          },
+          {
+            "type": "image",
+            "src": "Jewelry/colorpalette3.png",
+            "width": 1010,
+            "height": 570,
+            "alt": "Personal palette exploration with deep red, navy, grey, pale pink, and vivid red beside digital-layout references.",
+            "caption": "Visual language · Palette and web references."
+          }
+        ]
+      },
+      {
+        "title": "Direction Shift",
+        "layout": "text",
+        "paragraphs": [
+          "As the project developed, the direction shifted away from creating a separate sister brand. Instead, the focus returned to Milk & Rose itself and how the existing brand could evolve while developing a stronger visual identity."
+        ]
+      },
+      {
+        "title": "Early Web Concepts",
+        "layout": "full",
+        "paragraphs": [
+          "Early web drafts tested variations in layout, featured collections, and the balance between imagery and content. The three explorations below retain the earlier working name."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Jewelry/websiteExploration.png",
+            "width": 1590,
+            "height": 856,
+            "alt": "Three early Eldra website drafts comparing image layouts, a video area, and featured-collection sections.",
+            "caption": "Early web explorations · Three layout variations, shown together in the original composition."
+          }
+        ]
+      },
+      {
+        "title": "Landing Page Exploration",
+        "layout": "full",
+        "paragraphs": [
+          "During one stage of the project, I explored a landing page built around multiple screen-like frames. The composition drew from older television displays while combining them with a more contemporary digital presentation, creating a contrast between retro and futuristic references.",
+          "This direction reflected the visual identity being explored at that point in the project. As the Milk & Rose brand continued to develop, the color palette and overall visual language later shifted again."
+        ],
+        "supplement": "milk-rose-landing-notes.html",
+        "media": [
+          {
+            "type": "image",
+            "src": "Jewelry/entryPage.png",
+            "width": 2804,
+            "height": 1606,
+            "alt": "Earlier Eldra landing-page exploration with a grid of burgundy television-like frames, a central sign-up form, and gold earrings.",
+            "caption": "Selected earlier exploration · Shown with the Eldra working name; not the current Milk & Rose direction."
+          }
+        ]
+      },
+      {
+        "title": "Current Status",
+        "layout": "text",
+        "paragraphs": [
+          "Milk & Rose is still evolving. Since the explorations shown here, the brand's color palette and visual direction have continued to change as the broader redesign develops.",
+          "Because the project is ongoing, the newest design work is not currently shown publicly. This case study instead documents selected stages of the process and how the visual direction has evolved over time."
+        ]
+      }
+    ],
+    "next": "life",
+    "preview_category": "Brand Design / Web Design / UI·UX",
+    "year_label": "May 2026 — Present",
+    "metadata_fields": [
+      "role"
+    ],
+    "stylesheet": "Jewelry/milk-rose.css",
+    "thumbnail": "Jewelry/entryPage.png"
+  },
+  {
+    "id": "life",
+    "path": "LifePages/LifePages.html",
+    "title": "Your Life Pages",
+    "description": "Your Life Pages lets users take control of their accelerated time by making choices across work, social, and personal tasks, ultimately revealing how their habits shape the course of their life.",
+    "year": "2025",
+    "category": "Interactive Experience / Creative Coding",
+    "overview": [
+      "Your Life Pages lets users take control of their accelerated time by making choices across work, social, and personal tasks, ultimately revealing how their habits shape the course of their life."
+    ],
+    "role": [
+      "Interaction design",
+      "Illustration",
+      "Development"
+    ],
+    "tools": [
+      "React.js",
+      "Adobe Illustrator",
+      "CSS Grid"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "LifePages/start.png",
+      "alt": "Your Life Pages opening screen",
+      "shape": "natural",
+      "width": 512,
+      "height": 256
+    },
+    "thumbnail": "LifePages/start.png",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text-image",
+        "paragraphs": [
+          "In the world of Your Life Pages, people have a little more control over their time, but every choice comes with trade-offs. This interactive world explores how everyday decisions quietly shape the life we end up living, even though time is always finite."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "LifePages/planner.png",
+            "alt": "Life planner with work, social, and personal tasks",
+            "shape": "natural",
+            "width": 512,
+            "height": 258
+          }
+        ]
+      },
+      {
+        "title": "How it works",
+        "layout": "pair",
+        "paragraphs": [
+          "Users receive a simple life planner with three tasks: work, social connections, and personal joy, and make choices that feel natural to their habits. Spending more time on one task brings greater reward in that area but leaves less time for the others.",
+          "Once a task is completed, it is locked, reflecting the irreversibility of time. At the end, users receive a letter showing the life they have created, encouraging reflection rather than judging their decisions."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "LifePages/task.png",
+            "alt": "Task selection screen",
+            "shape": "natural",
+            "width": 1600,
+            "height": 803
+          },
+          {
+            "type": "image",
+            "src": "LifePages/result.png",
+            "alt": "Personalized closing letter",
+            "shape": "natural",
+            "width": 1600,
+            "height": 802
+          }
+        ]
+      },
+      {
+        "title": "Development",
+        "layout": "text",
+        "paragraphs": [
+          "I built Your Life Pages using React.js, with state variables tracking user choices and controlling page transitions, background updates, and endings. CSS Grid made objects in the background clickable, revealing subtle reflections, while Adobe Illustrator provided the custom visual environments.",
+          "The interactive experience responds dynamically to user decisions, including task completion and time extensions, and integrates adaptive audio to reinforce the passage of time."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final experience",
+        "layout": "full",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "embed",
+            "src": "https://www.youtube.com/embed/GEzvwL0lTAE",
+            "title": "Your Life Pages video demonstration"
+          }
+        ],
+        "links": [
+          {
+            "href": "https://github.com/zhouc658/TimeFinal2",
+            "label": "GitHub Repository"
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from LifePages/LifePages.html",
+    "next": "motion"
+  },
+  {
+    "id": "motion",
+    "path": "MLP/motion.html",
+    "title": "Helping Twilight Win the Crown",
+    "description": "A kinetic typography music video exploring individuality, unity, and collective movement.",
+    "category": "Motion Graphics / Kinetic Typography / After Effects",
+    "year": "2026",
+    "overview": [
+      "For this project, I created a kinetic typography music video for “Helping Twilight Win the Crown” from My Little Pony: Equestria Girls. The animation uses typography, color, repetition, and movement to follow the song’s progression from school-spirit energy toward a larger idea of people coming together while maintaining their individuality."
+    ],
+    "role": [
+      "Motion Designer",
+      "Visual Designer",
+      "Animator"
+    ],
+    "tools": [
+      "After Effects",
+      "Illustrator"
+    ],
+    "hero": {
+      "type": "video",
+      "src": "MLP/Crystal-Zhou_Project-01_1920x1080.mp4",
+      "title": "Helping Twilight Win the Crown — full film",
+      "caption": "Full film · Press play to watch."
+    },
+    "sections": [
+      {
+        "title": "Concept & Visual Direction",
+        "layout": "text",
+        "paragraphs": [
+          "I originally started with a school spirit and campaign-inspired direction because that was what I first connected with from the setting and story of the song. I began with a more limited blue and yellow color palette to match that traditional school-spirit feeling.",
+          "As I continued working on the video, my understanding of the song started to influence the visuals more. To me, the song gradually becomes less about just helping Twilight win and more about seeing different people come together and work toward the same goal.",
+          "Because of this, I began introducing more colors, especially colors inspired by the Main Six characters. Purple also became more prominent because it represents Twilight, who helps everyone recognize that even though they may seem different, they are not as different as they think and can still come together.",
+          "Toward the final chorus, when more students join in, more colors, repeated words, and typography begin entering the scenes. The different colors represent different people and backgrounds, while bringing them together within the same composition represents unity and inclusivity.",
+          "The final animation grows visually alongside the song. What begins with a limited school-spirit visual system gradually becomes more colorful, layered, and energetic as more voices join in. Through that progression, I wanted the typography itself to communicate the idea that individuality and belonging do not have to contradict each other."
+        ],
+        "supplement": "motion-progression.html"
+      },
+      {
+        "title": "Storyboard & Process",
+        "layout": "pair",
+        "paragraphs": [
+          "Before animating the final video, I planned how the lyrics, typography, movement, and transitions could work together across the song. The storyboard helped establish the pacing and gave me a structure for deciding where the visuals should become more energetic as additional voices join in."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "MLP/storyboard1.png",
+            "alt": "Storyboard sheet 1: lyric compositions and animation planning notes.",
+            "width": 530,
+            "height": 924
+          },
+          {
+            "type": "image",
+            "src": "MLP/storyboard2.png",
+            "alt": "Storyboard sheet 2: lyric compositions and animation planning notes.",
+            "width": 528,
+            "height": 842
+          },
+          {
+            "type": "image",
+            "src": "MLP/storyboard3.png",
+            "alt": "Storyboard sheet 3: lyric compositions and animation planning notes.",
+            "width": 528,
+            "height": 882
+          },
+          {
+            "type": "image",
+            "src": "MLP/storyboard4.png",
+            "alt": "Storyboard sheet 4: lyric compositions and animation planning notes.",
+            "width": 530,
+            "height": 422
+          },
+          {
+            "type": "image",
+            "src": "MLP/stroyboard5.png",
+            "alt": "Storyboard sheet 5: lyric compositions and animation planning notes.",
+            "width": 526,
+            "height": 376
+          },
+          {
+            "type": "image",
+            "src": "MLP/storyboard6.png",
+            "alt": "Storyboard sheet 6: lyric compositions and animation planning notes.",
+            "width": 520,
+            "height": 434
+          }
+        ]
+      },
+      {
+        "title": "Motion Moments",
+        "layout": "collage",
+        "media": [
+          {
+            "type": "image",
+            "src": "MLP/Friendship.gif",
+            "alt": "Animated friendship typography with blue and yellow stars.",
+            "width": 1920,
+            "height": 1080,
+            "caption": "TYPOGRAPHY + IMPACT"
+          },
+          {
+            "type": "image",
+            "src": "MLP/nightday.gif",
+            "alt": "Animated lyric sequence from “we’ve got something to say.”",
+            "width": 1920,
+            "height": 1080,
+            "caption": "NIGHT + DAY"
+          },
+          {
+            "type": "image",
+            "src": "MLP/pinkie-pie.gif",
+            "alt": "Animated Pinkie Pie lyric excerpt.",
+            "width": 1920,
+            "height": 1080,
+            "caption": "PINKIE PIE · LYRIC EXCERPT"
+          },
+          {
+            "type": "image",
+            "src": "MLP/rainbow.gif",
+            "alt": "Animated colorful typography with a crown and directional arrow.",
+            "width": 1920,
+            "height": 1080,
+            "caption": "MOVEMENT + DIRECTION"
+          }
+        ]
+      }
+    ],
+    "next": "shadow",
+    "title_lines": [
+      "Helping Twilight",
+      "Win the Crown"
+    ],
+    "annotation": [
+      "different voices,",
+      "same direction."
+    ],
+    "stylesheet": "MLP/motion.css",
+    "preview_category": "Typography / Motion Design"
+  },
+  {
+    "id": "shadow",
+    "path": "Shadow/Shadow.html",
+    "title": "Our Shadow Puppet Show",
+    "description": "Our Shadow Puppet Show lets viewers bring hand shadow puppets to life, triggering animated scenes that explore play, memory, and imagination.",
+    "year": "2025",
+    "category": "Creative Technology / Machine Learning",
+    "overview": [
+      "Our Shadow Puppet Show lets viewers bring hand shadow puppets to life, triggering animated scenes that explore play, memory, and imagination."
+    ],
+    "role": [
+      "Interaction design",
+      "Animation",
+      "Development"
+    ],
+    "tools": [
+      "Teachable Machine",
+      "HTML",
+      "JavaScript",
+      "Procreate"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "Shadow/player.png",
+      "alt": "Animated shadow puppet scene",
+      "shape": "natural",
+      "width": 1600,
+      "height": 907
+    },
+    "thumbnail": "Shadow/player.png",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text-image",
+        "paragraphs": [
+          "This interactive installation is inspired by childhood memories of making hand shadow puppets. Viewers use their hands to form shadows that trigger animated scenes, turning simple gestures into a playful narrative experience."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Shadow/poster.png",
+            "alt": "Hand shadow puppet instruction poster",
+            "shape": "portrait",
+            "width": 1191,
+            "height": 1600
+          }
+        ]
+      },
+      {
+        "title": "How it works",
+        "layout": "image-text",
+        "paragraphs": [
+          "The project focuses on two puppets, a bunny and a dog, guided by a poster that shows how to form each shape. A camera detects the shadow and plays a corresponding scene: the bunny pulling a carrot, the dog chasing a ball, or both appearing together. When two participants collaborate to form both puppets, a final scene unfolds in which the characters interact and become friends."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Shadow/end.png",
+            "alt": "Bunny and dog together in the final scene",
+            "shape": "natural",
+            "width": 1600,
+            "height": 930
+          }
+        ]
+      },
+      {
+        "title": "Visuals / Development",
+        "layout": "text",
+        "paragraphs": [
+          "The work encourages shared play and explores how memories and imagined scenes can be activated through simple physical actions. The visuals are designed to feel universal, drawing from familiar childhood imagery. Everything was designed and animated in Procreate.",
+          "I built this installation using the Teachable Machine, HTML, and JavaScript. I trained a model to detect hand shadow puppets by recording only the shadow shapes for better accuracy, then exported it to use in JavaScript to trigger the corresponding visual scenes."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final interaction",
+        "layout": "full",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "embed",
+            "src": "https://www.youtube.com/embed/oWmH3ytCVh4",
+            "title": "Our Shadow Puppet Show installation demonstration"
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from Shadow/Shadow.html",
+    "next": "train"
+  },
+  {
+    "id": "train",
+    "path": "Train/Train.html",
+    "title": "People Behavior on the 7 Train",
+    "description": "This project uses data I collected over three days to visualize how passengers in the first car of the 7 local train use their phones, interact, or stay disengaged, revealing patterns of connection and isolation in a shared public space.",
+    "year": "2025",
+    "category": "Data Visualization / Interaction",
+    "overview": [
+      "This project uses data I collected over three days to visualize how passengers in the first car of the 7 local train use their phones, interact, or stay disengaged, revealing patterns of connection and isolation in a shared public space."
+    ],
+    "role": [
+      "Data collection",
+      "Visualization",
+      "Development"
+    ],
+    "tools": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "Train/map.png",
+      "alt": "Passenger behavior visualization across the 7 train route",
+      "shape": "natural",
+      "width": 1600,
+      "height": 947
+    },
+    "thumbnail": "Train/map.png",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "This project visualizes human behavior in the first cart of the 7 local train between Flushing–Main St and 74th St–Broadway, based on three days of data I collected on how passengers used their phones, interacted, or remained disengaged. Users can explore each station, view heat maps, and compare patterns across days, with light and color reflecting the energy and individuality of the environment.",
+          "The visualization emphasizes personal presence within a shared space, revealing how people occupy the same environment yet often remain isolated or disconnected."
+        ],
+        "media": []
+      },
+      {
+        "title": "How it works",
+        "layout": "image-text",
+        "paragraphs": [
+          "I built the Subway visualization using JavaScript, with interactive features allowing users to drag the cart to explore each station, toggle between dates, and view the cart’s heat map. HTML and CSS were used to display the visualization and the project description on the webpage."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "Train/line.png",
+            "alt": "Interactive station-by-station passenger visualization",
+            "shape": "natural",
+            "width": 1600,
+            "height": 713
+          }
+        ]
+      },
+      {
+        "title": "Explore the visualization",
+        "layout": "text",
+        "paragraphs": [],
+        "media": [],
+        "links": [
+          {
+            "href": "https://zhouc658.github.io/CD-Interaction/city/",
+            "label": "View People Behavior on the 7 Train"
+          },
+          {
+            "href": "https://github.com/zhouc658/CD-Interaction/tree/main/city",
+            "label": "GitHub Repository"
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from Train/Train.html",
+    "next": "blossom"
+  },
+  {
+    "id": "blossom",
+    "path": "BlossomLand/land.html",
+    "title": "Blossom Land",
+    "description": "A physics-driven Rube Goldberg Machine designed in Unity that creates playful, visually engaging interactions with flowers and sweets.",
+    "year": "2025",
+    "category": "Creative Technology / 3D Interaction",
+    "overview": [
+      "A physics-driven Rube Goldberg Machine designed in Unity that creates playful, visually engaging interactions with flowers and sweets."
+    ],
+    "role": [
+      "3D interaction design",
+      "Development"
+    ],
+    "tools": [
+      "Unity",
+      "C#",
+      "3D modeling",
+      "Materials",
+      "Sound design",
+      "Lighting"
+    ],
+    "hero": {
+      "type": "video",
+      "src": "BlossomLand/demo.mp4",
+      "poster": "BlossomLand/thumbnail.png",
+      "title": "Blossom Land Rube Goldberg machine demonstration"
+    },
+    "thumbnail": "BlossomLand/thumbnail.png",
+    "sections": [
+      {
+        "title": "Concept / How it works",
+        "layout": "text",
+        "paragraphs": [
+          "This project designs and builds a physics-driven Rube Goldberg Machine using Unity. Chained 3D interactions, materials, sound effects, camera framing, motion, and lighting combine to create a playful, immersive experience. The machine triggers whimsical outcomes, like flowers popping or sweets rolling, providing a fun, visually rich demonstration of cause-and-effect in a digital environment."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final world",
+        "layout": "full",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "image",
+            "src": "BlossomLand/thumbnail.png",
+            "alt": "Blossom Land physics-driven scene",
+            "shape": "natural",
+            "width": 2860,
+            "height": 1596
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from BlossomLand/land.html",
+    "next": "newsletter"
+  },
+  {
+    "id": "newsletter",
+    "path": "newsletter/nl.html",
+    "title": "Blindbox Newsletter",
+    "description": "A typography-focused newsletter exploring blindbox culture, balancing visual storytelling and text to engage readers while educating them about the origins and history of blindboxes.",
+    "year": "2025",
+    "category": "Graphic Design / Editorial",
+    "overview": [
+      "A typography-focused newsletter exploring blindbox culture, balancing visual storytelling and text to engage readers while educating them about the origins and history of blindboxes."
+    ],
+    "role": [
+      "Typography",
+      "Layout design"
+    ],
+    "tools": [
+      "Adobe InDesign",
+      "Adobe Photoshop"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "newsletter/start.png",
+      "alt": "Blindbox Newsletter opening spread",
+      "shape": "natural",
+      "width": 2756,
+      "height": 1722
+    },
+    "thumbnail": "newsletter/start.png",
+    "sections": [
+      {
+        "title": "Visual system / Process",
+        "layout": "text",
+        "paragraphs": [
+          "The newsletter was created using Adobe InDesign and Photoshop. Each page balances visual storytelling and informative content, employing grid systems, typographic hierarchy, and layout techniques to maximize readability and engagement."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final newsletter",
+        "layout": "full",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "image",
+            "src": "newsletter/start.png",
+            "alt": "Blindbox Newsletter first spread",
+            "shape": "natural",
+            "caption": "Opening spread",
+            "width": 2756,
+            "height": 1722
+          },
+          {
+            "type": "image",
+            "src": "newsletter/page.png",
+            "alt": "Blindbox Newsletter second spread",
+            "shape": "natural",
+            "caption": "Inside spread",
+            "width": 2756,
+            "height": 1722
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from newsletter/nl.html",
+    "next": "logo"
+  },
+  {
+    "id": "logo",
+    "path": "logo/logo.html",
+    "title": "Monogram & ID Card Design",
+    "description": "An elegant and dreamy monogram logo that extends into a personalized ID card, exploring how a visual identity can evolve across formats.",
+    "year": "2025",
+    "category": "Branding / Identity",
+    "overview": [
+      "An elegant and dreamy monogram logo that extends into a personalized ID card, exploring how a visual identity can evolve across formats."
+    ],
+    "role": [
+      "Logo design",
+      "Typography",
+      "Identity design"
+    ],
+    "tools": [
+      "Adobe Illustrator",
+      "Adobe InDesign"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "logo/front.JPG",
+      "alt": "Monogram and personal identity card",
+      "shape": "portrait",
+      "height": 1050,
+      "width": 750
+    },
+    "thumbnail": "logo/front.JPG",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "This project began as a monogram logo design and expanded into a personalized ID card system. The goal was to create an elegant and dreamy visual identity through refined typography, soft forms, and cohesive visual details. By extending the monogram into an ID card format, the project explores how branding elements can remain consistent while adapting across different applications."
+        ],
+        "media": []
+      },
+      {
+        "title": "Visual system / Process",
+        "layout": "text",
+        "paragraphs": [
+          "The monogram was developed with attention to balance, proportion, and letterform harmony. After refining the logo, I extended the visual identity into a personalized ID card layout using Adobe InDesign, ensuring consistent typography, spacing, and hierarchy throughout the system."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final identity",
+        "layout": "pair",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "image",
+            "src": "logo/front.JPG",
+            "alt": "Monogram identity card front",
+            "shape": "portrait",
+            "height": 1050,
+            "width": 750
+          },
+          {
+            "type": "image",
+            "src": "logo/back.JPG",
+            "alt": "Monogram identity card reverse",
+            "shape": "portrait",
+            "height": 750,
+            "width": 1050
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from logo/logo.html",
+    "next": "cd"
+  },
+  {
+    "id": "cd",
+    "path": "cdCover/cd.html",
+    "title": "My Happy MUSIC",
+    "description": "A CD cover design visualizing how music transforms stress into focus and enjoyment during work.",
+    "year": "2023",
+    "category": "Graphic Design / Illustration",
+    "overview": [
+      "A CD cover design visualizing how music transforms stress into focus and enjoyment during work."
+    ],
+    "role": [
+      "Illustration",
+      "CD cover design"
+    ],
+    "tools": [
+      "Procreate",
+      "Adobe InDesign"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "cdCover/cdCover.JPEG",
+      "alt": "My Happy MUSIC complete CD cover",
+      "shape": "natural",
+      "height": 576,
+      "width": 1224
+    },
+    "thumbnail": "cdCover/cdCover.JPEG",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "My Happy MUSIC is a CD cover design inspired by the emotional shift I experience when listening to my YouTube playlist while working on assignments. The project explores the contrast between stress and joy, and how music transforms my mindset during focused tasks."
+        ],
+        "media": []
+      },
+      {
+        "title": "Visual language",
+        "layout": "text-image",
+        "paragraphs": [
+          "The front cover features a realistic illustration of my left hand working with an Apple Pencil, rendered in a dark blue color palette to convey stress and mental pressure. This drawing was based on a reference photo I took. The subdued tones reflect the emotional weight of completing assignments without music.",
+          "In contrast, the back cover presents a cartoon-style illustration of headphones playing music. The bright, colorful background represents the uplifting energy that music brings. The headphone wires wrap around the arm from the front cover, visually connecting the two sides and symbolizing how music reshapes the emotional experience of working."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "cdCover/cdCover.JPEG",
+            "alt": "Dark and colorful sides of the CD artwork",
+            "shape": "natural",
+            "height": 576,
+            "width": 1224
+          }
+        ]
+      },
+      {
+        "title": "Final work",
+        "layout": "text",
+        "paragraphs": [
+          "The title “MH MUSIC” references my personal playlist. The illustrations were created in Procreate using round and flat brushes on an iPad with Apple Pencil, and the final CD layout was assembled in Adobe InDesign.",
+          "Digital media · 8 × 17 in."
+        ],
+        "media": []
+      }
+    ],
+    "_source": "Copy and media retained from cdCover/cd.html",
+    "next": "caution"
+  },
+  {
+    "id": "caution",
+    "path": "cautious/cautious.html",
+    "title": "CAUTION",
+    "description": "A digital poster exploring the consequences of our digital footprint and the hidden harm created behind anonymous screens.",
+    "year": "2023",
+    "category": "Graphic Design / Poster",
+    "overview": [
+      "A digital poster exploring the consequences of our digital footprint and the hidden harm created behind anonymous screens."
+    ],
+    "role": [
+      "Illustration",
+      "Poster design"
+    ],
+    "tools": [
+      "Procreate"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "cautious/poster.jpg",
+      "alt": "CAUTION poster exploring the consequences of a digital footprint",
+      "shape": "portrait",
+      "height": 5700,
+      "width": 3900
+    },
+    "thumbnail": "cautious/poster.jpg",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "CAUTION addresses the lasting impact of our digital footprint. In an era where posting online often feels casual and consequence-free, this poster reflects on how harmful actions behind a screen can affect others — and eventually return to the perpetrator."
+        ],
+        "media": []
+      },
+      {
+        "title": "Visual language",
+        "layout": "text",
+        "paragraphs": [
+          "The composition depicts a masked figure illuminated by the glow of a MacBook, with red monster hands reaching toward their neck. The mask symbolizes anonymity and the idea that anyone can become the perpetrator behind the screen. Its shattered-glass eyes represent willful blindness — individuals who refuse to seek truth and instead choose to spread harm. The exaggerated clown-like smile suggests mockery and attention-seeking behavior, emphasizing the performative cruelty often seen online.",
+          "Toxic comments fill the background within the MacBook’s glow, reflecting the real language frequently encountered on social platforms. The comments are set in Arial, chosen for its similarity to commonly used online fonts. Neon colors dominate the palette to evoke digital environments, while the MacBook shares these hues to reinforce the connection between user and platform."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final work",
+        "layout": "text-image",
+        "paragraphs": [
+          "The red monster hands act as a symbolic warning — a manifestation of karma. They represent the harm created through digital actions, waiting to “strike back.” Through this work, I aim to caution viewers that anonymity does not erase responsibility, and that digital harm leaves a trace.",
+          "Digital media · 13 × 19 in."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "cautious/poster.jpg",
+            "alt": "Complete CAUTION poster",
+            "shape": "portrait",
+            "height": 5700,
+            "width": 3900
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from cautious/cautious.html",
+    "next": "chinese"
+  },
+  {
+    "id": "chinese",
+    "path": "chinese/chinese.html",
+    "title": "Chinese New Year Traditions",
+    "description": "A six-card illustrated series introducing Chinese New Year traditions through a storybook-style visual narrative.",
+    "year": "2023",
+    "category": "Graphic Design / Illustration",
+    "overview": [
+      "A six-card illustrated series introducing Chinese New Year traditions through a storybook-style visual narrative."
+    ],
+    "role": [
+      "Illustration",
+      "Layout design"
+    ],
+    "tools": [
+      "Procreate",
+      "Adobe Photoshop"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "chinese/chinese.jpg",
+      "alt": "Six illustrated cards celebrating Chinese New Year",
+      "shape": "natural",
+      "height": 3900,
+      "width": 5700
+    },
+    "thumbnail": "chinese/chinese.jpg",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "Chinese New Year Traditions is a six-card illustrated series designed to introduce and celebrate Lunar New Year customs. Created in a storybook style, the cards are arranged sequentially to narrate the progression of the holiday."
+        ],
+        "media": []
+      },
+      {
+        "title": "Visual system / Process",
+        "layout": "text",
+        "paragraphs": [
+          "The first and last cards function as the cover and back cover, using a distinct color palette to frame the series like a book. The illustrations were drawn in Procreate using pre-installed brushes on an iPad with Apple Pencil, and arranged in Photoshop on a 13 × 19 inch canvas."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final series",
+        "layout": "full",
+        "paragraphs": [
+          "The series includes New Year greetings in traditional Hanfu, decorating with lanterns and the 福 character, receiving red envelopes, a family reunion dinner featuring symbolic foods, the lion dance, and fireworks that reference the legend of Nian."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "chinese/chinese.jpg",
+            "alt": "Complete six-card Chinese New Year series",
+            "shape": "natural",
+            "height": 3900,
+            "width": 5700
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from chinese/chinese.html",
+    "next": "music"
+  },
+  {
+    "id": "music",
+    "path": "MusicDiary/MusicDiary.html",
+    "title": "Music Diary",
+    "description": "Music Diary transforms my music listening habits and moods into dynamic visuals using lines, colors, and symbols, revealing patterns in daily emotions and routines.",
+    "year": "2025",
+    "category": "Creative Technology / Data Visualization",
+    "overview": [
+      "Music Diary transforms my music listening habits and moods into dynamic visuals using lines, colors, and symbols, revealing patterns in daily emotions and routines."
+    ],
+    "role": [
+      "Interaction design",
+      "Illustration",
+      "Development"
+    ],
+    "tools": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Procreate"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "MusicDiary/study.png",
+      "alt": "Music Diary study scene",
+      "shape": "natural",
+      "width": 1600,
+      "height": 1000
+    },
+    "thumbnail": "MusicDiary/study.png",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "Music Diary is an interactive project that visualizes my music listening habits and moods using lines, colors, and symbols. The visuals adapt to my listening patterns, revealing connections between songs, activities, and emotions. This project turns personal data into a reflective experience that highlights patterns in daily life."
+        ],
+        "media": []
+      },
+      {
+        "title": "How it works",
+        "layout": "text",
+        "paragraphs": [
+          "This interactive data visualization was built using JavaScript, HTML, and CSS. You enter the number of songs you’ve listened to in each category and the line for the category with the highest number shines, highlighting the dominant mood. Symbols represent each song type and their size and quantity reflect the input data. For example, ten songs produce one big symbol while twenty-one songs produce one big symbol plus one small symbol. Press the spacebar to move between scenes. All data is stored locally, allowing the visualization to evolve over time, and pressing C clears everything to start fresh. Because it responds to real input, each scene is unique, showing how listening habits and emotions shift over time."
+        ],
+        "media": []
+      },
+      {
+        "title": "Visual scenes",
+        "layout": "collage",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "image",
+            "src": "MusicDiary/study.png",
+            "alt": "Study listening scene",
+            "shape": "natural",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "type": "image",
+            "src": "MusicDiary/walk.png",
+            "alt": "Walking listening scene",
+            "shape": "natural",
+            "width": 1600,
+            "height": 1000
+          },
+          {
+            "type": "image",
+            "src": "MusicDiary/relax.png",
+            "alt": "Relaxing listening scene",
+            "shape": "natural",
+            "width": 1600,
+            "height": 1000
+          }
+        ]
+      },
+      {
+        "title": "Final experience",
+        "layout": "text",
+        "paragraphs": [],
+        "media": [],
+        "links": [
+          {
+            "href": "https://zhouc658.github.io/CD-Interaction/Self_System/intro.html",
+            "label": "View Music Diary Live Here"
+          },
+          {
+            "href": "https://github.com/zhouc658/CD-Interaction/tree/main/Self_System",
+            "label": "GitHub Repository"
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from MusicDiary/MusicDiary.html",
+    "next": "mask"
+  },
+  {
+    "id": "mask",
+    "path": "mask/mask.html",
+    "title": "Face-Changing Filter",
+    "description": "A filter inspired by Sichuan opera’s bian lian masks and favorite childhood characters, creating an immersive, interactive experience.",
+    "year": "2025",
+    "category": "Creative Technology / Face Tracking",
+    "overview": [
+      "A filter inspired by Sichuan opera’s bian lian masks and favorite childhood characters, creating an immersive, interactive experience."
+    ],
+    "role": [
+      "Visual design",
+      "Development"
+    ],
+    "tools": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Face tracking"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "mask/red.png",
+      "alt": "Sichuan opera-inspired face-changing filter",
+      "shape": "natural",
+      "width": 1190,
+      "height": 1198
+    },
+    "thumbnail": "mask/red.png",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "This filter is inspired by the 'face-changing' art of Sichuan opera (变脸, bian lian). The first mask is based on a traditional mask seen during bian lian performances, honoring this art. The other two masks are inspired by favorite childhood characters: the Monkey King and Kero (from Cardcaptor Sakura). Background scenes corresponding to each mask make the experience more immersive for the audience."
+        ],
+        "media": []
+      },
+      {
+        "title": "How it works",
+        "layout": "text",
+        "paragraphs": [
+          "I built this interactive filter using face-tracking techniques in JavaScript. Each mask appears dynamically as the user moves their head, with background layers enhancing the immersive effect. The project combines traditional cultural elements with personal nostalgic characters to create a playful yet respectful interactive experience."
+        ],
+        "media": []
+      },
+      {
+        "title": "Final masks",
+        "layout": "strip",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "image",
+            "src": "mask/red.png",
+            "alt": "Sichuan opera mask",
+            "shape": "natural",
+            "width": 1190,
+            "height": 1198
+          },
+          {
+            "type": "image",
+            "src": "mask/monkey.png",
+            "alt": "Monkey King mask",
+            "shape": "natural",
+            "width": 1292,
+            "height": 1322
+          },
+          {
+            "type": "image",
+            "src": "mask/kero.png",
+            "alt": "Kero mask",
+            "shape": "natural",
+            "width": 1156,
+            "height": 1124
+          }
+        ],
+        "links": [
+          {
+            "href": "https://zhouc658.github.io/css_grid/html/up.html",
+            "label": "View Live Demo"
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from mask/mask.html",
+    "next": "quiz"
+  },
+  {
+    "id": "quiz",
+    "path": "quiz/quiz.html",
+    "title": "Blindbox Quiz",
+    "description": "A short quiz designed to help newcomers explore the world of blindboxes and get personalized suggestions.",
+    "year": "2025",
+    "category": "Creative Technology / Interaction",
+    "overview": [
+      "A short quiz designed to help newcomers explore the world of blindboxes and get personalized suggestions."
+    ],
+    "role": [
+      "Interaction design",
+      "Development"
+    ],
+    "tools": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "localStorage"
+    ],
+    "hero": {
+      "type": "image",
+      "src": "quiz/start.png",
+      "alt": "Blindbox Quiz opening screen",
+      "shape": "natural",
+      "width": 2880,
+      "height": 1800
+    },
+    "thumbnail": "quiz/start.png",
+    "sections": [
+      {
+        "title": "Concept",
+        "layout": "text",
+        "paragraphs": [
+          "This short quiz helps those who are new to the blindbox community and unsure where to start. Users answer a series of questions about their interests, and the quiz suggests what type of blindbox they might enjoy. It’s a playful, interactive way to introduce newcomers to collectible blindboxes."
+        ],
+        "media": []
+      },
+      {
+        "title": "How it works",
+        "layout": "text-image",
+        "paragraphs": [
+          "I built the quiz using JavaScript, storing answers locally with localStorage to calculate results based on user choices. The quiz dynamically provides suggestions based on the selections, making the experience personalized and responsive without requiring a backend."
+        ],
+        "media": [
+          {
+            "type": "image",
+            "src": "quiz/quiz.png",
+            "alt": "Blindbox Quiz question interface",
+            "shape": "natural",
+            "width": 2880,
+            "height": 1800
+          }
+        ]
+      },
+      {
+        "title": "Final experience",
+        "layout": "image-text",
+        "paragraphs": [],
+        "media": [
+          {
+            "type": "image",
+            "src": "quiz/receipt.png",
+            "alt": "Blindbox Quiz personalized result",
+            "shape": "natural",
+            "width": 2880,
+            "height": 1800
+          }
+        ],
+        "links": [
+          {
+            "href": "https://zhouc658.github.io/css_grid/quiz/quiz.html",
+            "label": "View Live Demo"
+          }
+        ]
+      }
+    ],
+    "_source": "Copy and media retained from quiz/quiz.html",
+    "next": "furumi"
+  }
+]

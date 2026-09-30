@@ -1,0 +1,4 @@
+# Python cache files from the static project generator and checks.
+__pycache__/
+*.py[cod]
+*.mp4

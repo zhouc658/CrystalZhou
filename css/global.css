@@ -76,3 +76,32 @@ h1 { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 6rem); line-h
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Shared portfolio masthead, including the existing tablet/mobile treatment. */
+:is(.page-home, .page-work, .page-about, .page-project) .site-header { border-bottom: 0; }
+:is(.page-home, .page-work, .page-about, .page-project) .site-header-inner { min-height: 6.2rem; gap: 1.75rem; }
+:is(.page-home, .page-work, .page-about, .page-project) .site-brand { font: 700 clamp(2rem, 4.6vw, 4.3rem)/1 Georgia, serif; letter-spacing: -0.07em; }
+:is(.page-home, .page-work, .page-about, .page-project) .site-nav { margin-left: auto; gap: clamp(1rem, 2.2vw, 2rem); }
+:is(.page-home, .page-work, .page-about, .page-project) .site-nav a { font: 600 0.8125rem/1 var(--font-meta); letter-spacing: 0; }
+:is(.page-home, .page-work, .page-about, .page-project) .site-header.is-scrolled .site-header-inner { min-height: 4.8rem; }
+.header-meta { display: flex; justify-content: space-between; gap: 1rem; padding-block: 0.5rem; position: relative; font: 600 0.8125rem/1.4 var(--font-meta); }
+.header-meta::before, .header-meta::after { content: ""; position: absolute; left: var(--page-gutter); right: var(--page-gutter); border-top: 1px solid var(--color-rule); }
+.header-meta::before { top: 0; }.header-meta::after { bottom: 0; }
+.header-meta p:first-child { color: var(--color-red); }
+.header-meta p:last-child { text-transform: uppercase; }
+.header-meta p span { padding-inline: 0.7rem; }
+.editorial-star { display: inline-block; width: 2rem; height: 2.8rem; flex-shrink: 0; background: var(--color-red); clip-path: polygon(50% 0, 60% 33%, 75% 43%, 100% 50%, 75% 57%, 60% 67%, 50% 100%, 40% 67%, 25% 57%, 0 50%, 25% 43%, 40% 33%); }
+@media (max-width: 1000px) {
+ :is(.page-home, .page-work, .page-about, .page-project) .site-header-inner { gap: 1rem; }
+ :is(.page-home, .page-work, .page-about, .page-project) .site-nav { gap: 0.9rem; }
+ :is(.page-home, .page-work, .page-about, .page-project) .site-nav a { font-size: 0.7rem; }
+ :is(.page-home, .page-work, .page-about, .page-project) .site-header-inner > .editorial-star { width: 1rem; }
+}
+@media (max-width: 700px) {
+ :is(.page-home, .page-work, .page-about, .page-project) .site-header-inner { min-height: 6.3rem; flex-wrap: wrap; flex-direction: row; align-items: center; justify-content: space-between; gap: 0; padding-block: 0.65rem; }
+ :is(.page-home, .page-work, .page-about, .page-project) .site-brand { font-size: 2rem; }
+ :is(.page-home, .page-work, .page-about, .page-project) .site-nav { order: 3; width: 100%; justify-content: space-between; margin-left: 0; }
+ :is(.page-home, .page-work, .page-about, .page-project) .site-header.is-scrolled .site-header-inner { min-height: 5.8rem; }
+ .header-meta { font-size: 0.58rem; gap: 0.5rem; }
+ .header-meta p span { padding-inline: 0.1rem; }
+}

@@ -5,62 +5,87 @@
     const sections = [...document.querySelectorAll('.work-section')];
     if (!directory) return;
 
-    let selectedCategory = null;
-    directory.addEventListener('click', event => {
-        const link = event.target.closest('a[href^="#"]');
-        if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-        const section = document.querySelector(link.getAttribute('href'));
-        if (!section) return;
-        event.preventDefault();
-        selectedCategory = selectedCategory === section.id ? null : section.id;
-        sections.forEach(item => { item.hidden = selectedCategory !== null && item.id !== selectedCategory; });
-        directory.querySelectorAll('a').forEach(item => {
-            if (item.hash === `#${selectedCategory}`) item.setAttribute('aria-current', 'true');
-            else item.removeAttribute('aria-current');
-        });
-        history.replaceState(null, '', selectedCategory ? `#${selectedCategory}` : '#all-work');
+    const entranceTargets = [document.querySelector('.archive-intro'), ...sections].filter(Boolean);
+    const previews = [...document.querySelectorAll('.work-project')];
+    const targets = [...entranceTargets, ...previews];
+    const pendingClass = target => target.matches('.work-project') ? 'is-pending' : 'is-waiting';
+    let entrance;
+    let departure;
+    const reset = target => target.classList.toggle(pendingClass(target), !reducedMotion.matches);
+    const reveal = target => target.classList.remove(pendingClass(target));
+    const observe = () => targets.forEach(target => {
+        entrance.observe(target);
+        departure.observe(target);
     });
 
     if ('IntersectionObserver' in window) {
-        const entrance = new IntersectionObserver(entries => {
+        // Observe stable layout boxes, not the moving artwork. Enter 32px inside
+        // the viewport; re-arm only after leaving it by 64px (hysteresis).
+        entrance = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.remove('is-waiting');
-                entrance.unobserve(entry.target);
+                if (entry.isIntersecting && !entry.target.closest('[hidden]')) reveal(entry.target);
             });
-        }, { threshold: 0, rootMargin: '0px 0px -6% 0px' });
-        const entranceTargets = [document.querySelector('.archive-intro'), ...sections].filter(Boolean);
-        entranceTargets.forEach(section => {
-            if (!reducedMotion.matches) section.classList.add('is-waiting');
-            entrance.observe(section);
-        });
-        const previews = [...document.querySelectorAll('.work-project')];
-        const previewEntrance = new IntersectionObserver(entries => {
+        }, { threshold: 0, rootMargin: '-32px 0px' });
+        departure = new IntersectionObserver(entries => {
             entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.remove('is-pending');
-                previewEntrance.unobserve(entry.target);
+                if (!entry.isIntersecting && !entry.target.contains(document.activeElement)) reset(entry.target);
             });
-        }, { threshold: 0.12 });
+        }, { threshold: 0, rootMargin: '64px 0px' });
         sections.forEach(section => {
             section.querySelectorAll('.work-project').forEach((project, index) => {
                 const stagger = section.id === 'graphic' ? 60 : 90;
                 project.style.setProperty('--preview-delay', `${320 + (index % 4) * stagger}ms`);
-                if (!reducedMotion.matches) project.classList.add('is-pending');
-                previewEntrance.observe(project);
             });
         });
-        // Keyboard navigation must never land on an unrevealed preview.
+        targets.forEach(reset);
+        // Commit the starting styles before the observers reveal visible content.
+        void directory.offsetWidth;
+        observe();
         document.addEventListener('focusin', event => {
-            event.target.closest('.work-project')?.classList.remove('is-pending');
-        });
-        reducedMotion.addEventListener('change', () => {
-            if (reducedMotion.matches) {
-                entranceTargets.forEach(section => section.classList.remove('is-waiting'));
-                previews.forEach(project => project.classList.remove('is-pending'));
+            const project = event.target.closest('.work-project');
+            if (project) {
+                reveal(project);
+                reveal(project.closest('.work-section'));
             }
         });
+        reducedMotion.addEventListener('change', () => {
+            // A preference change must never hide content currently being read.
+            targets.forEach(reveal);
+        });
     }
+
+    let selectedCategory = 'all-work';
+    directory.addEventListener('click', event => {
+        const link = event.target.closest('a[href^="#"]');
+        if (!link || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        const category = link.hash.slice(1);
+        if (category !== 'all-work' && !sections.some(section => section.id === category)) return;
+        event.preventDefault();
+        if (category === selectedCategory) return;
+        selectedCategory = category;
+        // Re-observe after filtering so even already-intersecting content gets
+        // a fresh entry notification. No queued events from the old layout survive.
+        entrance?.takeRecords();
+        departure?.takeRecords();
+        entrance?.disconnect();
+        departure?.disconnect();
+        sections.forEach(section => {
+            section.hidden = category !== 'all-work' && section.id !== category;
+            if (entrance) {
+                reset(section);
+                section.querySelectorAll('.work-project').forEach(reset);
+            }
+        });
+        directory.querySelectorAll('a').forEach(item => {
+            if (item.hash === `#${category}`) item.setAttribute('aria-current', 'true');
+            else item.removeAttribute('aria-current');
+        });
+        if (entrance) {
+            void directory.offsetWidth;
+            observe();
+        }
+        history.replaceState(null, '', `#${category}`);
+    });
 
     // Only decorative pseudo-elements move with scrolling; content stays fixed.
     const driftTargets = [

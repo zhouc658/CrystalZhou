@@ -1,0 +1,25 @@
+/* Case-study additions retain the shared portfolio typography and spacing. */
+.project-furumi .kocep-contributions { display: grid; grid-template-columns: 1fr; gap: 0.65rem 2rem; padding: 0; margin: 0; list-style: none; font: 0.875rem/1.6 var(--font-meta); }
+.project-furumi .kocep-rationale { margin-top: 2rem; border-left: 1px solid var(--color-rule); padding-left: 1.25rem; }
+.project-furumi .kocep-rationale h3, .project-furumi .kocep-notes { font: 0.75rem/1.6 var(--font-meta); }
+.project-furumi .kocep-rationale h3 { font-weight: 700; text-transform: uppercase; margin-bottom: 0.75rem; }
+.project-furumi .kocep-rationale h3 span { display: block; font-weight: 400; text-transform: none; }
+.project-furumi .kocep-rationale p { font: 1rem/1.5 Georgia, serif; }
+.project-furumi .kocep-notes { display: flex; flex-wrap: wrap; gap: 1rem 3rem; margin-top: 1.5rem; }
+.project-furumi .kocep-notes strong { display: block; text-transform: uppercase; }
+.project-furumi .kocep-flow { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; list-style: none; padding: 0; margin: 1.75rem 0 0; font: 0.75rem/1.6 var(--font-meta); text-transform: uppercase; }
+.project-furumi .kocep-flow li:not(:last-child)::after { content: ' →'; color: var(--color-red); margin-left: 1rem; }
+@media (max-width: 600px) {
+ .project-furumi .kocep-contributions { grid-template-columns: 1fr; }
+ .project-furumi .kocep-flow { display: block; }
+ .project-furumi .kocep-flow li:not(:last-child)::after { content: '↓'; display: block; margin: 0.4rem 0; }
+}
+
+.project-furumi .section-aside { border-left: 1px solid var(--color-rule); padding-left: var(--project-gap); min-width: 0; }
+.project-furumi .kocep-profile-flow { margin-top: 1.75rem; }
+.project-furumi .kocep-flow-label { font: 700 0.75rem/1.6 var(--font-meta); text-transform: uppercase; }
+.project-furumi .kocep-profile-flow .kocep-flow { margin-top: 0.5rem; }
+.project-furumi .kocep-profile-flow .kocep-flow + .kocep-flow-label { margin-top: 1.5rem; }
+@media (max-width: 600px) {
+ .project-furumi .section-aside { border-left: 0; border-top: 1px solid var(--color-rule); padding: 1.5rem 0 0; }
+}

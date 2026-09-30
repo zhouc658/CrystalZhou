@@ -1,0 +1,21 @@
+/* Keep the editorial grids; size media to the work, without padded frames. */
+.page-home .project .project-image { height: auto; aspect-ratio: auto; background: transparent; }
+.page-home .project-image img { display: block; width: 100%; height: auto; }
+.page-home .project .twilight-preview { aspect-ratio: 16 / 9; }
+.page-home .twilight-preview video { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+.page-work .work-image { background: transparent; }
+.page-home .feature-image[data-preview-slideshow],
+.page-work .work-section .work-project .work-image[data-preview-slideshow] {
+ position: relative; aspect-ratio: 1868 / 1592; height: auto; overflow: hidden;
+}
+.page-home [data-preview-slideshow] .preview-slide,
+.page-work .work-section [data-preview-slideshow] .preview-slide {
+ position: absolute; inset: 0; display: block; width: 100%; height: 100%;
+ object-fit: cover; object-position: center top; opacity: 0; transition: opacity 550ms ease;
+}
+[data-preview-slideshow] .preview-slide.is-active { opacity: 1 !important; }
+/* The note stays on the existing stage without covering the product navigation. */
+.page-home .feature-stage .feature-annotation { top: auto; bottom: 1rem; left: auto; right: 1rem; font-size: clamp(0.65rem, 1vw, 0.9rem); padding: 0.6rem 0.8rem; }
+@media (prefers-reduced-motion: reduce) {
+ [data-preview-slideshow] .preview-slide { transition: none !important; }
+}
