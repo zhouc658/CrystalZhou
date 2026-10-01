@@ -56,7 +56,7 @@ def MediaBlock(media, page, hero=False):
 def SiteHeader(page, active='work'):
     """One masthead partial for Home, Work, About, and every project."""
     values = {}
-    for name, target in [('home', 'index.html'), ('work', 'work.html'), ('about', 'about.html')]:
+    for name, target in [('home', 'index.html'), ('work', 'work.html')]:
         values[name + '_url'] = esc(relative(target, page))
         values[name + '_current'] = ' aria-current="page"' if active == name else ''
     return (ROOT / 'templates/site-header.html').read_text().strip().format(**values)
@@ -144,7 +144,7 @@ def render(project, catalog):
 {sections}
 {NextProject(project, catalog[project['next']])}
 </main>
-<footer id="contact" class="site-footer container" tabindex="-1"><div class="project-footer"><h2>Let's connect</h2><p>Email <span>— to be provided</span></p><p>Social links <span>— to be provided</span></p><a href="{url('index.html')}">Crystal Zhou</a></div></footer>
+<footer id="contact" class="site-footer container" tabindex="-1"><div class="project-footer"><h2>Let's connect</h2><p>Email <a href="mailto:zhouc658@newschool.edu">zhouc658@newschool.edu</a></p><a href="{url('index.html')}">Crystal Zhou</a></div></footer>
 </body></html>
 '''
 
